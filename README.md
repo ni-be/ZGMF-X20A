@@ -1,1 +1,7 @@
 # ZGMF-X20A
+
+# HELIX
+# NVIM
+# ZELLIJ
+# TMUX
+# ZSH & BASH
