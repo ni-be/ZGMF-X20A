@@ -1,0 +1,5 @@
+
+bindsym Mod4+Print exec grimshot save activei # current window
+bindsym Print exec grimshot save area # select area
+bindsym Mod4+Shift+Print  exec grimshot save output # current output
+bindsym Mod4+Ctrl+Print  exec grimshot save window # select a window

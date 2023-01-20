@@ -1,0 +1,105 @@
+###########################
+####### ALIAS #############
+###########################
+
+### QOL ###################
+
+# ssh login
+
+noel() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/ghdev
+}
+###########################
+##### ZELLIJ ##############
+###########################
+alias nene=". ~/.config/zellij/script/current-session.sh"
+
+#run in floating window
+alias faiya="zellij run -f --"
+
+
+#### LAYOUT #####
+#################
+
+
+############################
+#### KNOWN Workspaces ######
+############################
+
+# LATEX repo -> nikolasbertrand/kaku 
+alias kaku="zellij --session kaku --layout ~/.config/zellij/layout/kaku.kdl"
+alias ka="zellij a kaku"
+
+#### Exercism
+alias rin="zellij --session rin --layout ~/.config/zellij/layout/rin.kdl"
+alias ra="zellij a rin"
+
+#### Alias MetaTelingo Project
+alias metatel="zellij --session meta --layout ~/.config/zellij/layout/metatel.kdl"
+alias ma="zellij a meta"
+
+
+### Mail, Whatsapp, Telegram, Matrix, calendar, todo, bartib
+alias jinsei="zellij --session jinsei --layout ~/.config/zellij/layout/jinsei.kdl"
+alias ji="zellij a jinsei"
+
+#TODO still Testing Himalaya for EMAIL, but no official WA and TG cli client - might just do mail, todo, + bartib
+#alias world=""
+
+#### Portable Dotfiles for Editor, ZSH, Zellij, and maybe .ssh theme 
+alias omnimon="/usr/bin/git --git-dir=$HOME/.omnimon/ --work-tree=$HOME"
+
+#### Config folder backup 
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+
+##########################
+##### SOFTWARE ###########
+##########################
+
+alias wz='flatpak run org.wezfurlong.wezterm'
+
+#### VS CODE #############
+alias unko="code"
+
+#### Lunarvim ###############
+
+alias luna="lvim"
+
+###########################
+##### CLI TOOLS ###########
+## making life easier #####
+###########################
+
+alias peko="bartib"
+alias jp="jisho-cli"
+###########################
+#### GIT ##################
+###########################
+alias g="git"
+alias gdiff="git diff"
+
+alias lui="gitui"
+alias nlui="lazygit"
+
+
+###########################
+####### EXA ###############
+alias ll='exa -l --icons --no-user --git'
+alias l1='exa --tree --level 1 --icons --git'
+alias l2='exa --tree --level 2 --icons --git'
+alias l3='exa --tree --level 3 --icons --git'
+
+alias ls='exa'
+alias la='exa --all'
+
+
+###########################
+##### RIPGREP #############
+
+###########################
+###### RIP ################
+
+###########################
+####### 

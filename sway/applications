@@ -1,0 +1,13 @@
+
+### SOFTWARE #########
+    bindsym $mod+Return exec $term
+    bindsym $mod+i exec $browser
+    bindsym $mod+shift+i exec $zoom-browser
+    bindsym $mod+alt+Return exec $sndterm
+    bindsym $mod+shift+Return exec foot -e ~/.cargo/bin/fx
+     
+	bindsym $mod+alt+e exec flatpak run app/im.riot.Riot/
+    bindsym $mod+alt+t exec flatpak run app/org.telegram.desktop/
+    bindsym $mod+alt+b  exec flatpak run app/com.bitwarden.desktop/
+    bindsym $mod+alt+z  exec flatpak run app/org.zotero.Zotero/
+    bindsym $mod+alt+w exec flatpak run app/us.zoom.Zoom/

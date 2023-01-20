@@ -1,0 +1,36 @@
+layout {
+	default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+	// Gloab working directory
+	cwd "/home/nbertrand/jinsei"
+	tab name="Notes" split_direction="vertical" {
+		pane size="25%" name="ToDo & Time"
+       	pane size="75%" name="note" cwd="notes" command="fx"
+		
+    }
+	tab name="Mail" {
+		pane name="EMAIL" 
+	}
+	tab name="Calendar" {
+		pane name="Google"
+	}
+	tab name="MATRIX" {
+		pane name="Element/Matrix" 
+	}
+	tab name="Chat" {
+		pane name="Telegram/Whatsapp"
+	}
+	tab name="FILES"{
+		pane name="Felix" cwd="pdf" //command="~/.cargo/bin/felix"
+	}
+	tab name="GIT" {
+		pane name="Git" command="gitui"
+	}
+}

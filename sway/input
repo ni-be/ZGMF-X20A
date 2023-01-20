@@ -1,0 +1,15 @@
+
+input "2:14:SynPS/2_Synaptics_TouchPad" {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+   }
+
+input "type:keyboard" {
+    xkb_layout us
+    xkb_variant ,nodeadkeys
+    xkb_options ctrl:nocaps
+    }
+
+exec fcitx5 

@@ -1,0 +1,30 @@
+exec mako
+exec fcitx5
+set $mod Mod4
+set $term foot
+set $browser brave-browser
+set $zoom-brows /usr/bin/firefox
+#set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu ~/.cargo/bin/kickoff  
+
+include ~/.config/sway/monitor
+include ~/.config/sway/window
+include ~/.config/sway/control
+include ~/.config/sway/motions
+include ~/.config/sway/workspaces
+include ~/.config/sway/applications
+include ~/.config/sway/keybindings
+include ~/.config/sway/scratchpad
+include ~/.config/sway/statusbar
+include ~/.config/sway/zellij
+include ~/.config/sway/power
+include ~/.config/sway/launcher
+include ~/.config/sway/input
+include ~/.config/sway/output
+include ~/.config/sway/screenshot
+
+# Reload the configuration file
+    bindsym $mod+Shift+c reload
+	
+
+

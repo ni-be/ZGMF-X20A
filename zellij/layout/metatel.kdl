@@ -1,0 +1,31 @@
+layout {
+	default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+	// Gloab working directory
+	cwd "/home/nbertrand/ASP/telingo-wise22-23-team0"
+	tab name="CwD" split_direction="vertical" {
+	
+        pane size="50%" name="main" command="fx"{
+			
+		}
+		pane size="50%" split_direction="horizontal" {
+			pane name="TESTS" command="fx" size="60%"
+			pane name="cmd" size="40%"
+			}
+	}
+	
+	tab name="Meta Telingo" split_direction="vertical" {
+		pane name="META FILE" edit="/home/nbertrand/ASP/telingo-wise22-23-team0/tests/niko/mod_meta/mod_meta-telingo.lp"
+		pane name="secondary" command="fx"
+	}
+	tab name="Git" {
+		pane name="Git" command="gitui"
+	}
+}
