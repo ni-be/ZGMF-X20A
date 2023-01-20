@@ -5,3 +5,5 @@
 # ZELLIJ
 # TMUX
 # ZSH & BASH
+# LVIM
+# SKIM and some others
