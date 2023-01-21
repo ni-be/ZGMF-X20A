@@ -15,18 +15,6 @@ layout {
        	pane size="75%" name="note" cwd="notes" command="fx"
 		
     }
-	tab name="Mail" {
-		pane name="EMAIL" 
-	}
-	tab name="Calendar" {
-		pane name="Google"
-	}
-	tab name="MATRIX" {
-		pane name="Element/Matrix" 
-	}
-	tab name="Chat" {
-		pane name="Telegram/Whatsapp"
-	}
 	tab name="FILES"{
 		pane name="Felix" cwd="pdf" //command="~/.cargo/bin/felix"
 	}

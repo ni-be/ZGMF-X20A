@@ -10,7 +10,7 @@ layout {
     }
 	// Gloab working directory
 	cwd "/home/nbertrand/library/kaku"
-	tab name="Library" split_direction="vertical" {
+	tab name="書斎" split_direction="vertical" {
 		
        	pane size="80%" name="TEX"
 	
@@ -20,7 +20,7 @@ layout {
 		}
 	}
 	tab name="FILES"{
-		pane name="Felix" command="~/.cargo/bin/felix"
+		pane name="Felix" command="~/.cargo/bin/fx"
 	}
 	tab name="Git" {
 		pane name="Git" command="gitui"

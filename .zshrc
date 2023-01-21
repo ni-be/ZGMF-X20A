@@ -106,4 +106,5 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
-#eval "$(zellij setup --generate-auto-start zsh)"
+#eval "$(zellij -s ogog子 setup --generate-auto-start zsh)"
+#source ~/.config/zsh/zellij_autostart

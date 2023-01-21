@@ -1,0 +1,8 @@
+// STANDARD LAYOUT FOR STARTING ZELLIJ -- ZELLIJ IN ZELLIJ
+
+layout {
+	cwd "/home/nbertrand"
+	pane name="海賊戦隊ゴーカイジャー" size=1 borderless=false {
+    
+		}
+}
