@@ -28,30 +28,18 @@ alias faiya="zellij run -f --"
 ############################
 
 # LATEX repo -> nikolasbertrand/kaku 
-alias kaku="zellij --session kaku --layout ~/.config/zellij/layout/kaku.kdl"
-alias ka="zellij a kaku"
+alias noel="zellij --session ノエル --layout ~/.config/zellij/layout/kaku.kdl"
 
 #### Exercism
-alias rin="zellij --session rin --layout ~/.config/zellij/layout/rin.kdl"
-alias ra="zellij a rin"
+alias sui="zellij --session すいせい --layout ~/.config/zellij/layout/rin.kdl"
 
 #### Alias MetaTelingo Project
-alias metatel="zellij --session meta --layout ~/.config/zellij/layout/metatel.kdl"
-alias ma="zellij a meta"
-
+alias meta="zellij --session Meta-Telingo --layout ~/.config/zellij/layout/metatel.kdl"
 
 ### Mail, Whatsapp, Telegram, Matrix, calendar, todo, bartib
-alias jinsei="zellij --session jinsei --layout ~/.config/zellij/layout/jinsei.kdl"
-alias ji="zellij a jinsei"
+alias jin="zellij --session 人生 --layout ~/.config/zellij/layout/jinsei.kdl"
 
-#TODO still Testing Himalaya for EMAIL, but no official WA and TG cli client - might just do mail, todo, + bartib
-#alias world=""
 
-#### Portable Dotfiles for Editor, ZSH, Zellij, and maybe .ssh theme 
-alias omnimon="/usr/bin/git --git-dir=$HOME/.omnimon/ --work-tree=$HOME"
-
-#### Config folder backup 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 
 ##########################
@@ -81,7 +69,7 @@ alias g="git"
 alias gdiff="git diff"
 
 alias lui="gitui"
-alias nlui="lazygit"
+
 
 
 ###########################
