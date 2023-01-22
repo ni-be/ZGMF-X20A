@@ -6,17 +6,33 @@
 
 # ssh login
 
-noel() {
+あ() {
     eval $(ssh-agent -s)
     ssh-add ~/.ssh/ghdev
 }
+い() {
+    git add --all
+    git commit -m "update"
+    git push
+}
+## placeholder for further scripts
+#う
+#え
+#お
+#ア
+#イ
+#ウ
+#エ
+#オ
 ###########################
 ##### ZELLIJ ##############
 ###########################
-alias nene=". ~/.config/zellij/script/current-session.sh"
+
+##### Choose active session ### TODO CHARM - make it look nicer 
+alias ねね=". ~/.config/zellij/script/current-session.sh"
 
 #run in floating window
-alias faiya="zellij run -f --"
+alias zrf="zellij run -f --"
 
 
 #### LAYOUT #####
@@ -28,16 +44,16 @@ alias faiya="zellij run -f --"
 ############################
 
 # LATEX repo -> nikolasbertrand/kaku 
-alias noel="zellij --session ノエル --layout ~/.config/zellij/layout/kaku.kdl"
+alias ひちゃん="zellij --session ひより --layout ~/.config/zellij/layout/kaku.kdl"
 
 #### Exercism
-alias sui="zellij --session すいせい --layout ~/.config/zellij/layout/rin.kdl"
+alias すいせい="zellij --session すいせい --layout ~/.config/zellij/layout/rin.kdl"
 
 #### Alias MetaTelingo Project
-alias meta="zellij --session Meta-Telingo --layout ~/.config/zellij/layout/metatel.kdl"
+alias メタ="zellij --session メターテリンゴ --layout ~/.config/zellij/layout/metatel.kdl"
 
 ### Mail, Whatsapp, Telegram, Matrix, calendar, todo, bartib
-alias jin="zellij --session 人生 --layout ~/.config/zellij/layout/jinsei.kdl"
+alias 人生="zellij --session 人生 --layout ~/.config/zellij/layout/jinsei.kdl"
 
 
 
@@ -49,11 +65,11 @@ alias jin="zellij --session 人生 --layout ~/.config/zellij/layout/jinsei.kdl"
 alias wz='flatpak run org.wezfurlong.wezterm'
 
 #### VS CODE #############
-alias unko="code"
+alias うんこ="code"
 
 #### Lunarvim ###############
 
-alias luna="lvim"
+alias るな="lvim"
 
 ###########################
 ##### CLI TOOLS ###########
@@ -61,7 +77,8 @@ alias luna="lvim"
 ###########################
 
 alias peko="bartib"
-alias jp="jisho-cli"
+alias 字="jisho-cli"
+alias ji="jisho-cli"
 ###########################
 #### GIT ##################
 ###########################
