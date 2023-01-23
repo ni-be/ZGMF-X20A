@@ -2,21 +2,16 @@ layout {
 	
     cwd "/home/nbertrand/SHOSAI/kaku"
 	default_tab_template {
-        pane size=1 borderless=true {
-            plugin location="zellij:tab-bar"
-        }
         children
         pane size=2 borderless=true {
-            plugin location="zellij:status-bar"
+            plugin location="zellij:compact-bar"
         }
     }
 	// Gloab working directory
 	//cwd "/home/nbertrand/SHOSAI/kaku"
 	tab name="MAIN" split_direction="vertical" {
-		pane size="20%" {
-			plugin location="zellij:strider"
-		}
-       	pane size="80%" name="쓰기"
+	    pane name="쓰기"
+			
 	
     }
 	tab name="BIB" {
