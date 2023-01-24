@@ -89,8 +89,6 @@ alias gdiff="git diff"
 
 alias lui="gitui"
 
-
-
 ###########################
 ####### EXA ###############
 alias ll='exa -l --icons --no-user --git'
