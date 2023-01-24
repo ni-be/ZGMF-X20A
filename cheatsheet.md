@@ -154,21 +154,93 @@ a <object>	  Select around textobject	                          select_textobjec
 i <object>	  Select inside textobject	                          select_textobject_inner
 
 
+### WINDOW MODE
+
+w, Ctrl-w	        Switch to next window	                                rotate_view        v, Ctrl-v	        Vertical right split	                                vsplit
+s, Ctrl-s	        Horizontal bottom split	                              hsplit             
+f	                Go to files in the selection in horizontal splits	    goto_file          F	                Go to files in the selection in vertical splits	      goto_file          
+h, Ctrl-h, Left	  Move to left split	                                  jump_view_left     j, Ctrl-j, Down	  Move to split below	                                  jump_view_down     
+k, Ctrl-k, Up	    Move to split above	                                  jump_view_up       l, Ctrl-l, Right	Move to right split	                                  jump_view_right    
+q, Ctrl-q	        Close current window	                                wclose             o, Ctrl-o	        Only keep the current window, closing all the others	wonly              
+H	                Swap window to the left	                              swap_view_left     J	                Swap window downwards	                                swap_view_down     
+K	                Swap window upwards	                                  swap_view_up       L	                Swap window to the right	                            swap_view_right
+
+### SPACE MODE
+Global search displays results in a fuzzy picker, use Space + ' to bring it back up after opening a file.
+
+f	                Open file picker	                                    file_picker
+F	                Open file picker at current working directory	        file_picker_in_current_directory
+b	                Open buffer picker	                                  buffer_picker
+j	                Open jumplist picker	                                jumplist_picker
+k	                Show documentation for item under cursor in a popup (LSP)	hover
+s	                Open document symbol picker (LSP)	                    symbol_picker
+S	                Open workspace symbol picker (LSP)	                  workspace_symbol_picker
+d	                Open document diagnostics picker (LSP)	              diagnostics_picker
+D	                Open workspace diagnostics picker (LSP)	              workspace_diagnostics_picker
+r	                Rename symbol (LSP)	                                  rename_symbol
+a	                Apply code action (LSP)	                              code_action
+'	                Open last fuzzy picker	                              last_picker
+w	                Enter window mode	
+p	                Paste system clipboard after selections	              paste_clipboard_after
+P	                Paste system clipboard before selections	            paste_clipboard_before
+y	                Join and yank selections to clipboard	                yank_joined_to_clipboard
+Y	                Yank main selection to clipboard	                    yank_main_selection_to_clipboard
+R	                Replace selections by clipboard contents	            replace_selections_with_clipboard
+/	                Global search in workspace folder	                    global_search
+?	                Open command palette	                                command_palette
 
 
+### POP - UP
+
+Displays documentation for item under cursor.
+Ctrl-u	          Scroll up            Ctrl-d	        Scroll down
+
+### UNIMPAIRED 
+
+[d	                Go to previous diagnostic (LSP)	            goto_prev_diag        ]d	                Go to next diagnostic (LSP)	                goto_next_diag
+[D	                Go to first diagnostic in document (LSP)	  goto_first_diag       ]D	                Go to last diagnostic in document (LSP)	    goto_last_diag
+]f	                Go to next function (TS)	                  goto_next_function    [f	                Go to previous function (TS)	              goto_prev_function
+]t	                Go to next type definition (TS)	            goto_next_class       [t	                Go to previous type definition (TS)	        goto_prev_class
+]a	                Go to next argument/parameter (TS)	        goto_next_parameter   [a	                Go to previous argument/parameter (TS)	    goto_prev_parameter
+]c	                Go to next comment (TS)	                    goto_next_comment     [c	                Go to previous comment (TS)	                goto_prev_comment
+]T	                Go to next test (TS)	                      goto_next_test        ]T	                Go to previous test (TS)	                  goto_prev_test
+]p	                Go to next paragraph	                      goto_next_paragraph   [p	                Go to previous paragraph	                  goto_prev_paragraph
+]g	                Go to next change	                          goto_next_change      [g	                Go to previous change	                      goto_prev_change
+]G	                Go to first change	                        goto_first_change     [G	                Go to last change	                          goto_last_change
+[Space	            Add newline above	                          add_newline_above     ]Space	            Add newline below	                          add_newline_below
+
+### INSERT MODE
+
+Escape	                  Switch to normal mode	            normal_mode            Ctrl-s	                  Commit undo checkpoint	          commit_undo_checkpoint
+Ctrl-x	                  Autocomplete	                    completion             Ctrl-r	                  Insert a register content	        insert_register
+Ctrl-w, Alt-Backspace	    Delete previous word	            delete_word_backward   Alt-d, Alt-Delete	        Delete next word	                delete_word_forward
+Ctrl-u	                  Delete to start of line	          kill_to_line_start     Ctrl-k	                  Delete to end of line	            kill_to_line_end
+Ctrl-h,                   Backspace	Delete previous char	  delete_char_backward   Ctrl-d,                   Delete	Delete next char	        delete_char_forward
+Ctrl-j,                   Enter	Insert new line	            insert_newline
 
 
+### PICKER 
+Shift-Tab, Up, Ctrl-p	    Previous entry        Tab, Down, Ctrl-n	        Next entry
+PageUp, Ctrl-u	          Page up               PageDown, Ctrl-d	        Page down
+Home	                    Go to first entry     End	                      Go to last entry
+Enter	                    Open selected         Ctrl-s	                  Open horizontally
+Ctrl-v	                  Open vertically       Ctrl-t	                  Toggle preview
+Escape, Ctrl-c	          Close picker
 
+### PROMPT
+Escape, Ctrl-c	                                 Close prompt                    Alt-b, Ctrl-Left	                                 Backward a word
+Ctrl-b, Left	                                   Backward a char                 Alt-f, Ctrl-Right        	                       Forward a word
+Ctrl-f, Right	                                   Forward a char                  Ctrl-e, End	                                     Move prompt end
+Ctrl-a, Home	                                   Move prompt start               Ctrl-w, Alt-Backspace, Ctrl-Backspace	Delete     previous word
+Alt-d, Alt-Delete, Ctrl-Delete                   Delete next word                Ctrl-u	                                           Delete to start of line
+Ctrl-k	                                         Delete to end of line           Backspace, Ctrl-h	                               Delete previous char
+Delete, Ctrl-d	                                 Delete next char                Ctrl-s	                                           Insert a word under doc cursor, may be changed to Ctrl-r Ctrl-w later
+Ctrl-p, Up	                                     Select previous history         Ctrl-n, Down	                                     Select next history
+Ctrl-r	                                         Insert the content of the register selected by following input char
+Tab	                                             Select next completion item     BackTab	                                         Select previous completion item
+Enter	                                           Open selected
 
-
-
-
-
-
-
-
-
-
+## ZELLIJ
 
 
 
