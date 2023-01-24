@@ -65,11 +65,8 @@ alias 人生="zellij --session 人生 --layout ~/.config/zellij/layout/jinsei.kd
 alias wz='flatpak run org.wezfurlong.wezterm'
 
 #### VS CODE #############
-alias うんこ="code"
+alias うんこ="code --"
 
-#### Lunarvim ###############
-
-alias るな="lvim"
 
 ###########################
 ##### CLI TOOLS ###########

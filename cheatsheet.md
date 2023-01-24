@@ -30,6 +30,37 @@ CTRL + Shift C | V      Clipboard Copy Paste                                    
 
 ## ZSH
 ### ALIAS
+#### GIT 
+あ - github login         ア -
+い - add, commit, push    イ -
+う -                      ウ -
+え -                      エ -
+お -                      オ -
+lui - gitui
+
+#### Zellij
+zrf  zellij run -f --  RUN cmd and open float with 
+
+ねね choose from current sessions if no session open a new one
+ひちゃん　Latex Writing Repo
+すいせい　Exercism Session
+メタ      Meta Telingo Session
+人生      Personal Notes todo , mail, etc session 
+
+#### VSCODE
+うんこ    VS CODE 
+
+#### Bartib - Time Tracking
+peko 
+
+#### Jisho CLI
+ji, 字
+
+#### EXA
+ls             - exa
+la             - exa --all
+ll             - exa -l + icons + no user
+l1, l2, l3     - exa with tree different levels
 
 ## HELIX Editor Bindings
 ### MOTIONS
