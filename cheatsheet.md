@@ -17,6 +17,54 @@ SUPER + M               Window on all Workspaces                                
 
 
 ## SWAY WINDOW MANAGER
+### APPLICATIONS
+bindsym $mod+Return exec $term
+bindsym $mod+i exec $browser
+bindsym $mod+shift+Return exec foot -e ~/.cargo/bin/fx
+bindsym $mod+alt+e exec flatpak run app/im.riot.Riot/
+bindsym $mod+alt+t exec flatpak run app/org.telegram.desktop/
+bindsym $mod+alt+b  exec flatpak run app/com.bitwarden.desktop/
+bindsym $mod+alt+z  exec flatpak run app/org.zotero.Zotero/
+bindsym $mod+alt+w exec flatpak run app/us.zoom.Zoom/
+
+### Moving around:
+
+#### Move your focus around
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+    
+    #### Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    #### Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+    
+    #### Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move rightH,J,K,L 
+
+### POWER MANAGEMENT
+    bindsym $mod+Shift+delete Power Menu
+       - p  poweroff
+       - r  reboot
+       - l  lock
+       - e  log out
+       - s  suspend               
+
+### SCRATCHPAD
+    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+minus scratchpad show
+
 
 ### APPLICATION
 
