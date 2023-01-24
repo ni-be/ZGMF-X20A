@@ -3,4 +3,7 @@ output eDP-1 scale 1
 output DP-3 scale 1
 output HDMI-A-1 scale 1
 
-output "*" bg ~/Pictures/Wallpapers/grafic/2.png fill
+#output $WS9 bg ~/Pictures/Wallpapers/grafic/2.png fill
+output "*" bg ~/Pictures/Wallpapers/3840x2160-cyberpunk-city-streets-4k_1540750791.jpg fill 
+#output "*" bg ~/Pictures/Wallpapers/grafic/2.png fill
+
