@@ -92,7 +92,6 @@ export EDITOR='hx'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 
-
 source ~/.config/zsh/shell-integration
 source ~/.config/zsh/exports
 source ~/.config/zsh/alias
