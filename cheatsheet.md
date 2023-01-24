@@ -1,3 +1,6 @@
+# TODO 
+Sort out Tabs vs Spaces....... 
+
 # Personal Cheatsheet for keybindings 
 
 ## General 
@@ -65,6 +68,43 @@
     bindsym $mod+Shift+minus move scratchpad
     bindsym $mod+minus scratchpad show
 
+### SCREENSHOT
+    bindsym Mod4+Print exec grimshot save activei # current window
+    bindsym Print exec grimshot save area # select area
+    bindsym Mod4+Shift+Print  exec grimshot save output # current output
+    bindsym Mod4+Ctrl+Print  exec grimshot save window # select a windowi
+
+### WORKSPACES
+    bindsym $mod+SHift+q  kill programm
+    bindsym $mod+d exec $menu
+    
+    n = 1..10 (0)
+    bindsym $mod+<n> workspace number <n>
+    bindsym $mod+Shift+<n> move container to workspace number <1>
+
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    Move focus to the parent container
+    bindsym $mod+a focus parent
+
+    Resize
+    mod+r mode "resize"
+    use h,j,k,l
 
 ### APPLICATION
 
