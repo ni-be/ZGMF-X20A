@@ -309,7 +309,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 require('mason').setup()
 
 -- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'sumneko_lua'}
 
 -- Ensure the servers above are installed
 require('mason-lspconfig').setup {
@@ -329,8 +329,8 @@ end
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
-
 require('lspconfig').sumneko_lua.setup {
+  
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {

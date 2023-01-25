@@ -6,5 +6,6 @@ if [ "${NO_SESSIONS}" -ge 2 ]; then
     zellij attach \
     "$(echo "${ZJ_SESSIONS}" | sk)"
 else
-   zellij attach -c
+   #zellij attach -c
+  zellij --layout ~/.config/zellij/layout/futsu.kdl attach -c
 fi

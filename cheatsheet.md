@@ -10,121 +10,25 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
 3. ALT + [ ]              Terminal Multiplexer
 4. Space +[ ], CTRL+ [ ]  Text Editor 
 
-## SWAY WINDOW MANAGER
-### APPLICATIONS
-    bindsym $mod+Return exec $term
-    bindsym $mod+i exec $browser
-    bindsym $mod+shift+Return exec foot -e ~/.cargo/bin/fx
-    bindsym $mod+alt+e exec flatpak run app/im.riot.Riot/
-    bindsym $mod+alt+t exec flatpak run app/org.telegram.desktop/
-    bindsym $mod+alt+b  exec flatpak run app/com.bitwarden.desktop/
-    bindsym $mod+alt+z  exec flatpak run app/org.zotero.Zotero/
-    bindsym $mod+alt+w exec flatpak run app/us.zoom.Zoom/
-
-#### CLI TOOLS
-
-##### TTYD Terminal in Browser start Headless
-        bindsym $mod+shift+i exec google-chrome-stable
-        bindsym $mod+ctrl+i  exec ttyd -t enableSixel=true -p 9001 zsh
-
-### Moving around:
-
-#### Move your focus around
-    bindsym $mod+$left focus left
-    bindsym $mod+$down focus down
-    bindsym $mod+$up focus up
-    bindsym $mod+$right focus right
-    
-    #### Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
-
-    #### Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
-    
-    #### Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move rightH,J,K,L 
-
-### POWER MANAGEMENT
-    bindsym $mod+Shift+delete Power Menu
-       - p  poweroff
-       - r  reboot
-       - l  lock
-       - e  log out
-       - s  suspend               
-
-### SCRATCHPAD
-    bindsym $mod+Shift+minus move scratchpad
-    bindsym $mod+minus scratchpad show
-
-### SCREENSHOT
-    bindsym Mod4+Print exec grimshot save activei # current window
-    bindsym Print exec grimshot save area # select area
-    bindsym Mod4+Shift+Print  exec grimshot save output # current output
-    bindsym Mod4+Ctrl+Print  exec grimshot save window # select a windowi
-
-### WORKSPACES
-    bindsym $mod+SHift+q  kill programm
-    bindsym $mod+d exec $menu
-
-    bindsym $mod+m sticky toggle  -> float on every workspace on a single monitor    
-    n = 1..10 (0)
-    bindsym $mod+<n> workspace number <n>
-    bindsym $mod+Shift+<n> move container to workspace number <1>
-
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
-
-    Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
-
-    Make the current focus fullscreen
-    bindsym $mod+f fullscreen
-
-    Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
-
-    Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
-
-    Move focus to the parent container
-    bindsym $mod+a focus parent
-
-    Resize
-    mod+r mode "resize"
-    use h,j,k,l
-
-### FCITX (henkan key available on HHKB)
+## FCITX (henkan key available on HHKB)
     henkan, F12             JP <-> EN
     Shift+henkan            tmp Katakana (JP input)
     FN+henkan               halfwidth -> full width     
 
-### TERMINAL (FOOT Terminal)
+## TERMINAL (FOOT Terminal)
     SHIFT + Page_Up         Scrollback Up Page                                            
     SHIFT + Page_Down       Scrollback Down Page
     CTRL + Shift C | V      Clipboard Copy Paste                                            
     CTRL + SHift R          Search
 
-### ZSH
-#### ALIAS
+## ZSH
 
-
-##### TTYD Terminal in browser
+### TTYD Terminal in browser
 
     alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
     alias ttydk="ps -ef | rg ttyd"
 
-##### GIT 
+### GIT 
     あ - github login         ア -
     い - add, commit, push    イ -
     う -                      ウ -
@@ -132,65 +36,65 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     お -                      オ -
     lui - gitui
 
-#### Zellij
-    zrf  zellij run -f --  RUN cmd and open float with 
-    myu  zellij
+### Zellij
+    zrf        zellij run -f --  RUN cmd and open float with 
+    myu        zellij
         
-    ねね choose from current sessions if no session open a new one
-    ひちゃん　Latex Writing Repo
-    すいせい　Exercism Session
-    メタ      Meta Telingo Session
-    人生      Personal Notes todo , mail, etc session 
+    ねね        choose from current sessions if no session open a new one
+    ひちゃん    Latex Writing Repo
+    すいせい    Exercism Session
+    メタ        Meta Telingo Session
+    人生        Personal Notes todo , mail, etc session 
 
-#### VSCODE
-    うんこ    VS CODE 
+### VSCODE
+    うんこ      VS CODE 
 
-#### Bartib - Time Tracking
+### Bartib - Time Tracking
     peko 
 
-#### Jisho CLI
+### Jisho CLI
     ji, 字
 
-#### EXA
+### EXA
     ls             - exa
     la             - exa --all
     ll             - exa -l + icons + no user
     l1, l2, l3     - exa with tree different levels
 
-#### BAT
+### BAT
 
-#### SKIM
+### SKIM
 
-#### etc 
+### etc 
 
 ## HELIX Editor Bindings
 ### MOTIONS
     KEY                     DESCRIPTION                          COMMAND                        
-    h, Left	                Move left	                           move_char_left                 
-    j, Down                 Move down                            move_line_down
-    k, Up	                  Move up	                             move_line_up                   
-    l, Right                Move right                           move_char_right
-    w	                      Move next word start	               move_next_word_start           
-    b	                      Move previous word start	           move_prev_word_start
-    e	                      Move next word end	                 move_next_word_end             
-    W	                      Move next WORD start	               move_next_long_word_start
-    B	                      Move previous WORD start	           move_prev_long_word_start      
-    E	                      Move next WORD end	                 move_next_long_word_end
-    t	                      Find 'till next char	               find_till_char                 
-    f	                      Find next char	                     find_next_char
-    T	                      Find 'till previous char	           till_prev_char                 
-    F	                      Find previous char	                 find_prev_char
-    G	                      Go to line number <n>	               goto_line                      
-    Alt-.	                  Repeat last motion (f, t or m)	     repeat_last_motion
-    Home	                  Move to the start of the line	       goto_line_start                
-    End	                    Move to the end of the line	         goto_line_end
-    Ctrl-b,                 PageUp	Move page up	               page_up                        
-    Ctrl-f,                 PageDown	Move page down	           page_down
-    Ctrl-u	                Move half page up	                   half_page_up                   
-    Ctrl-d	                Move half page down	                 half_page_down
-    Ctrl-i	                Jump forward on the jumplist	       jump_forward                   
-    Ctrl-o	                Jump backward on the jumplist	       jump_backward
-    Ctrl-s	                Save the current selection jumplist	 save_selection
+    h, Left            |     Move leftmove_char_left                 
+    j,Down             |     Move Downmove_line_down
+    k,                 |     UpMove                           
+    l, Right           |     Move right                               
+    w	                 |     Move next word start                            
+    b	                 |     Move previous word start	          
+    e	                      Move next word end	                             
+    W	                      Move next WORD start	              
+    B	                      Move previous WORD start	                
+    E	                      Move next WORD end	                
+    t	                      Find 'till next char	                                
+    f	                      Find next char	                     
+    T	                      Find 'till previous char	                            
+    F	                      Find previous char	                 
+    G	                      Go to line number <n>	                                     
+    Alt-.	                  Repeat last motion (f, t or m)	     
+    Home	                  Move to the start of the line	                       
+    End	                    Move to the end of the line	         
+    Ctrl-b,                 PageUp	Move page up	                                       
+    Ctrl-f,                 PageDown	Move page down	           
+    Ctrl-u	                Move half page up	                                      
+    Ctrl-d	                Move half page down	                 
+    Ctrl-i	                Jump forward on the jumplist	                          
+    Ctrl-o	                Jump backward on the jumplist	       
+    Ctrl-s	                Save the current selection jumplist	 
 
 ### CHANGING TEXT
     r	                      Replace with a character	replace                                    

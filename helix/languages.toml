@@ -1,4 +1,17 @@
 [[language]]
+name = "clingo"
+scope = "scope.clingo"
+file-types = ["lp","ilp"]
+comment-token = "%"
+roots = []
+indent = { tab-width = 2, unit = "  "}
+language-server = { command = "~/.cargo/bin/asp-lanuage-server", args = ["--stdio"] }
+
+# [[grammar]]
+# name = "clingo"
+# source = {git = "https://github.com/nikolasbertrand/tree-sitter-clingo", rev = "1776564ed82f7c2d89dc38a86c68f18c9b863681"}
+
+[[language]]
 name = "rust"
 scope = "source.rust"
 injection-regex = "rust"
@@ -408,20 +421,20 @@ indent = { tab-width = 4, unit = "    " }
 name = "php"
 source = { git = "https://github.com/tree-sitter/tree-sitter-php", rev = "57f855461aeeca73bd4218754fb26b5ac143f98f" }
 
-#[[language]]
-#name = "latex"
-#config = { texlab = { build = { onSave = true, forwardSearchAfter = true }, forwardSearch = { executable = "zathura", args = [ "--synctex-forward", "%l:1:%f", "%p" ] }, chktex = { onEdit = true } } }
-
 [[language]]
 name = "latex"
-scope = "source.tex"
-injection-regex = "tex"
-file-types = ["tex"]
-roots = []
-comment-token = "%"
-language-server = { command = "texlab" }
-indent = { tab-width = 4, unit = "\t" }
 config = { texlab = { build = { onSave = true, forwardSearchAfter = true }, forwardSearch = { executable = "zathura", args = [ "--synctex-forward", "%l:1:%f", "%p" ] }, chktex = { onEdit = true } } }
+
+# [[language]]
+# name = "latex"
+# scope = "source.tex"
+# injection-regex = "tex"
+# file-types = ["tex"]
+# roots = []
+# comment-token = "%"
+# language-server = { command = "texlab" }
+# indent = { tab-width = 4, unit = "\t" }
+# config = { texlab = { build = { onSave = true, forwardSearchAfter = true }, forwardSearch = { executable = "zathura", args = [ "--synctex-forward", "%l:1:%f", "%p" ] }, chktex = { onEdit = true } } }
 
 [[grammar]]
 name = "latex"

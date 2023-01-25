@@ -40,11 +40,13 @@ alias ttydk="ps -ef | rg ttyd"
 ###########################
 
 ##### Choose active session ### TODO CHARM - make it look nicer 
+
 alias ねね=". ~/.config/zellij/script/current-session.sh"
 
 #run in floating window
 alias zrf="zellij run -f --"
-alias myu="zellij"
+alias myu="zellij --layout ~/.config/zellij/layout/futsu.kdl"
+
 
 #### LAYOUT #####
 #################

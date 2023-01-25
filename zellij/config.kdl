@@ -3,13 +3,10 @@ keybinds {
 
     // Lock Zellij
     locked {
-        bind "Ctrl l" { SwitchToMode "Tmux"; }
+        bind "Ctrl l" { SwitchToMode "Normal"; }
         
     }
-    normal {
-        // use normal for scripts
-    }
-    tmux {
+    normal  {
         // Pane and Tab creation and closure
         bind "Alt w" { NewPane "Right";}
         bind "Alt W" { NewPane "Down";}
@@ -50,7 +47,7 @@ keybinds {
 
    // Resize Menu
     session {
-        bind "Esc" { SwitchToMode "Tmux"; }
+        bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
         bind "j" { Resize "Increase Down"; }
         bind "k" { Resize "Increase Up"; }
@@ -71,19 +68,19 @@ keybinds {
 
         //customize
         bind "Alt z" { TogglePaneFrames;}
-        bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Tmux"; }  
-        bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Tmux"; } /// WHAT DOES IT DO????yc
+        bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }  
+        bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Normal"; } /// WHAT DOES IT DO????yc
 
         
         bind "Alt p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
         bind "Alt t" { SwitchToMode "RenameTab"; TabNameInput 0; }
         
     }
-      scroll {
-        bind "Esc" { SwitchToMode "Tmux"; }
-        bind "e" { EditScrollback; SwitchToMode "Tmux"; }
+    scroll {
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
-        bind "b" { ScrollToBottom; SwitchToMode "Tmux"; }
+        bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" { ScrollDown; }
         bind "k" { ScrollUp; }
         bind "l" { PageScrollDown; }
@@ -92,8 +89,8 @@ keybinds {
         bind "u" { HalfPageScrollUp; }
     }
     search {
-        bind "Esc" { SwitchToMode "Tmux"; }
-        bind "b" { ScrollToBottom; SwitchToMode "Tmux"; }
+        bind "Esc" { SwitchToMode "Normal"; }
+        bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" { ScrollDown; }
         bind "k" { ScrollUp; }
         bind "l" { PageScrollDown; }
@@ -106,16 +103,16 @@ keybinds {
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
     }
-    entersearch {
+    entersearch clear-defaults=true {
         bind "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
-    renametab {
-        bind "Enter" { SwitchToMode "Tmux"; }
+    renametab clear-defaults=true {
+        bind "Enter" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
-    renamepane {
-        bind "Enter" { SwitchToMode "Tmux"; }
+    renamepane clear-defaults=true {
+        bind "Enter" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
 
@@ -125,17 +122,17 @@ keybinds {
         bind "Ctrl l" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
     }
-    shared_except "tmux" "locked" {
-        bind "Enter" "Esc" { SwitchToMode "Tmux"; }
+    shared_except "Normal" "locked" {
+        bind "Esc" "Alt Down" { SwitchToMode "Normal"; }
     }
     shared_except "search" "locked" {
-        bind "Alt `" { SwitchToMode "Search"; }
+        bind "Alt Right" { SwitchToMode "Search"; }
     }
     shared_except "scroll" "locked" {
-        bind "Alt [" { SwitchToMode "Scroll"; }
+        bind "Alt Left" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Alt ]" { SwitchToMode "Session"; }
+        bind "Alt Up" { SwitchToMode "Session"; }
     }
 }
 
@@ -176,9 +173,9 @@ default_shell "zsh"
 
 theme "tokyo-night-storm"
 
-//default_layout "futsu"
+//default_layout "~/.config/zellij/layout/futsu.kdl"
 
-default_mode "Tmux"
+default_mode "Normal"
 
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -235,7 +232,7 @@ copy_command "wl-copy"                    // wayland
 
 // The folder in which Zellij will look for layouts
 //
-layout_dir "~/.config/zellij/layout"
+//layout_dir "~/.config/zellij/layout"
 
 // The folder in which Zellij will look for themes
 //

@@ -21,4 +21,8 @@ export BARTIB_FILE="/home/nbertrand/SHOSAI/jinsei/time.md"
 export TODO_FILE="/home/nbertrand/SHOSAI/jinsei/todo/todo.txt"
 export DONE_FILE="/home/nbertrand/SHOSAI/jinsei/todo/done.txt"
 
+###################################################
+### LSP
+##################################################
+export PATH=/home/nbertrand/.cargo/bin/asp-language-server:$PATH
 
