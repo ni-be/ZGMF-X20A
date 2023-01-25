@@ -157,15 +157,11 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     ll             - exa -l + icons + no user
     l1, l2, l3     - exa with tree different levels
 
-### CLI Tools
-
-#### TTYD
-
 #### BAT
 
 #### SKIM
 
-#### 
+#### etc 
 
 ## HELIX Editor Bindings
 ### MOTIONS
