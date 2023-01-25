@@ -6,7 +6,9 @@
 
 # TTYD Terminal in browser
 
-alias tich="ttyd -p 9001 zsh"
+alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+alias ttydk="ps -ef | rg ttyd"
+
 ###########################
 ## ssh login
 ###########################

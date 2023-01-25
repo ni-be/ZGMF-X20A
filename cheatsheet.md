@@ -10,20 +10,6 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
 3. ALT + [ ]              Terminal Multiplexer
 4. Space +[ ], CTRL+ [ ]  Text Editor 
 
- 
-
-              
-    SUPER + 1,..,7          Switch Workspaces
-    SUPER + SHIFT + 1,...,7 MOVE WINDOW to that Workspace                               
-    SUPER + R               Toggle Resize
-    SUPER + H,J,K,L         resize                                                        
-    SUPER + O               Change V-H split                                            
-    SUPER + Mouse drag      change window position
-    SUPER + M               Window on all Workspaces                                   
-    SUPER + LEFT RIGHT      Switch workspace
-
-
-
 ## SWAY WINDOW MANAGER
 ### APPLICATIONS
     bindsym $mod+Return exec $term
@@ -131,6 +117,13 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
 
 ### ZSH
 #### ALIAS
+
+
+##### TTYD Terminal in browser
+
+    alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+    alias ttydk="ps -ef | rg ttyd"
+
 ##### GIT 
     あ - github login         ア -
     い - add, commit, push    イ -
