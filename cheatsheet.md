@@ -68,16 +68,54 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
 
 ## HELIX Editor Custom Bindings
 Keybindings - https://docs.helix-editor.com/commands.html
+Ctrl-,  <- ALT-. Repeat last motion (f, t, m)
+Ctrl-`  <- lt-` Set the selected text to upper case
+NO CONFLICT  Alt-u	Move backward in history	
+NO CONFLICT  Alt-U	Move forward in history
 
+Alt-d	Delete selection, without yanking
+Alt-c	Change selection (delete and enter insert mode, without yanking)
+
+in SHell
+Ctrl-| <- Alt-|	Pipe each selection into shell command, ignoring output
+
+Selection manipulation
+Alt-s	Split selection on newlines
+
+CTRL-; <-- Alt-;	Flip selection cursor and anchor	
+CTRL-: <-- Alt-:	Ensures the selection is in forward direction	
+CTRL-, <-- Alt-,	Remove the primary selection
+
+NO CONFLICT Alt-C	Copy selection onto the previous line (Add cursor above)
+NO COnflict Alt-x	Shrink selection to line bounds (line-wise selection)
+
+NO Conflict Alt-(	Rotate selection contents backward
+NO COnflict Alt-)	Rotate selection contents forward
+
+CONFLICTS
+Alt-J	Join lines inside selection and select space
+Alt-K	Remove selections matching the regex
+
+CONFLICTS
+Alt-o, Alt-up	Expand selection to parent syntax node (TS)
+Alt-i, Alt-down Shrink syntax tree object selection (TS)
+Alt-p, Alt-left	Select previous sibling node in syntax tree (TS)
+Alt-n, Alt-right	Select next sibling node in syntax tree (TS)
+
+CONFLICTS
+INSERT MODE
+Ctrl-w, Alt-Backspace	Delete previous word
+Alt-d, Alt-Delete	Delete next word
+
+CONFLICTS
+PROMPT 
+Alt-f, Ctrl-Right	Forward a word
 ## ZELLIJ
 
 ### LOCKED MODE
-    bind "Ctrl l" { SwitchToMode "Tmux"; }
+    bind "Ctrl l" { SwitchToMode "Normal"; }
         
-### NORMAL MODE    
-    // use normal for scripts
-
-### TMUX MODE    
+### Normal MODE    
     #### Pane and Tab creation and closure
     bind "Alt w" { NewPane "Right";}
     bind "Alt W" { NewPane "Down";}
@@ -115,7 +153,7 @@ Keybindings - https://docs.helix-editor.com/commands.html
        
 
 ### Session Menu
-    bind "Esc" { SwitchToMode "Tmux"; }
+    bind "Esc" { SwitchToMode "Normal"; }
     bind "h" { Resize "Increase Left"; }
     bind "j" { Resize "Increase Down"; }
     bind "k" { Resize "Increase Up"; }
@@ -136,18 +174,17 @@ Keybindings - https://docs.helix-editor.com/commands.html
 
     #### EHM?
     bind "Alt z" { TogglePaneFrames;}
-    bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Tmux"; }  
-    bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Tmux"; } /// WHAT DOES IT DO????yc
-        
+    bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }  
+    bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Normal"; }         
     bind "Alt p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     bind "Alt t" { SwitchToMode "RenameTab"; TabNameInput 0; }
         
 ### Scroll Menu
     
-    bind "Esc" { SwitchToMode "Tmux"; }
-    bind "e" { EditScrollback; SwitchToMode "Tmux"; }
+    bind "Esc" { SwitchToMode "Normal"; }
+    bind "e" { EditScrollback; SwitchToMode "Normal"; }
     bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
-    bind "b" { ScrollToBottom; SwitchToMode "Tmux"; }
+    bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
     bind "j" { ScrollDown; }
     bind "k" { ScrollUp; }
     bind "l" { PageScrollDown; }
@@ -156,8 +193,8 @@ Keybindings - https://docs.helix-editor.com/commands.html
     bind "u" { HalfPageScrollUp; }
 
 ### Search Menu
-    bind "Esc" { SwitchToMode "Tmux"; }
-    bind "b" { ScrollToBottom; SwitchToMode "Tmux"; }
+    bind "Esc" { SwitchToMode "Normal"; }
+    bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
     bind "j" { ScrollDown; }
     bind "k" { ScrollUp; }
     bind "l" { PageScrollDown; }
@@ -176,11 +213,11 @@ Keybindings - https://docs.helix-editor.com/commands.html
         bind "Enter" { SwitchToMode "Search"; }
     
 ####    renametab 
-        bind "Enter" { SwitchToMode "Tmux"; }
+        bind "Enter" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     
 ####    renamepane 
-        bind "Enter" { SwitchToMode "Tmux"; }
+        bind "Enter" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
 
 ### Shared bindings 
@@ -188,8 +225,8 @@ Keybindings - https://docs.helix-editor.com/commands.html
         bind "Ctrl l" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
     
-    #### shared_except "tmux" "locked" 
-        bind "Enter" "Esc" { SwitchToMode "Tmux"; }
+    #### shared_except "normal" "locked" 
+        bind "Enter" "Esc" { SwitchToMode "Normal"; }
     
     #### shared_except "search" "locked" 
         bind "Alt `" { SwitchToMode "Search"; }
