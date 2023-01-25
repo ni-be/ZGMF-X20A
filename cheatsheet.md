@@ -1,5 +1,6 @@
 # TODO 
 Sort out Tabs vs Spaces....... 
+Sort out Duplicate bindings Helix -> Zellij some Alt + might be double 
 
 # Personal Cheatsheet for keybindings 
 
@@ -11,12 +12,17 @@ Sort out Tabs vs Spaces.......
 
 ## GNOME 
 
-    Henkan                  FCITX5 Switch Language EN -> JP                             SHIFT + Henkan          Katakana tmp input
-    FN + Henkan             Switch between Katakana, Halfwidth, fullwidth               SUPER + 1,..,7          Switch Workspaces
-    SUPER + SHIFT + 1,...,7 MOVE WINDOW to that Workspace                               SUPER + R               Toggle Resize
-    SUPER + H,J,K,L     resize                                                        
-    SUPER + O               Change V-H split                                            SUPER + Mouse drag      change window position
-    SUPER + M               Window on all Workspaces                                    SUPER + LEFT RIGHT      Switch workspace
+    Henkan                  FCITX5 Switch Language EN -> JP                             
+    SHIFT + Henkan          Katakana tmp input
+    FN + Henkan             Switch between Katakana, Halfwidth, fullwidth               
+    SUPER + 1,..,7          Switch Workspaces
+    SUPER + SHIFT + 1,...,7 MOVE WINDOW to that Workspace                               
+    SUPER + R               Toggle Resize
+    SUPER + H,J,K,L         resize                                                        
+    SUPER + O               Change V-H split                                            
+    SUPER + Mouse drag      change window position
+    SUPER + M               Window on all Workspaces                                   
+    SUPER + LEFT RIGHT      Switch workspace
 
 
 ## SWAY WINDOW MANAGER
@@ -133,7 +139,8 @@ Sort out Tabs vs Spaces.......
 
 #### Zellij
     zrf  zellij run -f --  RUN cmd and open float with 
-
+    myu  zellij
+        
     ねね choose from current sessions if no session open a new one
     ひちゃん　Latex Writing Repo
     すいせい　Exercism Session

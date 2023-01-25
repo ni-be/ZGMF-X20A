@@ -38,7 +38,7 @@ alias ねね=". ~/.config/zellij/script/current-session.sh"
 
 #run in floating window
 alias zrf="zellij run -f --"
-
+alias myu="zellij"
 
 #### LAYOUT #####
 #################
