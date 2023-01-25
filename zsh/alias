@@ -4,8 +4,12 @@
 
 ### QOL ###################
 
-# ssh login
+# TTYD Terminal in browser
 
+alias tich="ttyd -p 9001 zsh"
+###########################
+## ssh login
+###########################
 あ() {
     eval $(ssh-agent -s)
     ssh-add ~/.ssh/ghdev

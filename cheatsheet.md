@@ -10,11 +10,9 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
 3. ALT + [ ]              Terminal Multiplexer
 4. Space +[ ], CTRL+ [ ]  Text Editor 
 
-## GNOME 
+ 
 
-    Henkan                  FCITX5 Switch Language EN -> JP                             
-    SHIFT + Henkan          Katakana tmp input
-    FN + Henkan             Switch between Katakana, Halfwidth, fullwidth               
+              
     SUPER + 1,..,7          Switch Workspaces
     SUPER + SHIFT + 1,...,7 MOVE WINDOW to that Workspace                               
     SUPER + R               Toggle Resize
@@ -23,6 +21,7 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     SUPER + Mouse drag      change window position
     SUPER + M               Window on all Workspaces                                   
     SUPER + LEFT RIGHT      Switch workspace
+
 
 
 ## SWAY WINDOW MANAGER
@@ -35,6 +34,12 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     bindsym $mod+alt+b  exec flatpak run app/com.bitwarden.desktop/
     bindsym $mod+alt+z  exec flatpak run app/org.zotero.Zotero/
     bindsym $mod+alt+w exec flatpak run app/us.zoom.Zoom/
+
+#### CLI TOOLS
+
+##### TTYD Terminal in Browser start Headless
+        bindsym $mod+shift+i exec google-chrome-stable
+        bindsym $mod+ctrl+i  exec ttyd -t enableSixel=true -p 9001 zsh
 
 ### Moving around:
 
@@ -113,23 +118,20 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     mod+r mode "resize"
     use h,j,k,l
 
-### APPLICATION
+### FCITX (henkan key available on HHKB)
+    henkan, F12             JP <-> EN
+    Shift+henkan            tmp Katakana (JP input)
+    FN+henkan               halfwidth -> full width     
 
-    SUPER + ENTER           FOOT TERMINAL                                               
-    SUPER + I               Brave-Browser
-    SUPER + D               Search Menu                                                 
-    SUPER + T               Open Todo list (GNOME ONLY)
-
-
-## TERMINAL (FOOT Terminal)
+### TERMINAL (FOOT Terminal)
     SHIFT + Page_Up         Scrollback Up Page                                            
     SHIFT + Page_Down       Scrollback Down Page
     CTRL + Shift C | V      Clipboard Copy Paste                                            
     CTRL + SHift R          Search
 
-## ZSH
-### ALIAS
-#### GIT 
+### ZSH
+#### ALIAS
+##### GIT 
     あ - github login         ア -
     い - add, commit, push    イ -
     う -                      ウ -
@@ -161,6 +163,16 @@ Sort out Duplicate bindings Helix -> Zellij some Alt + might be double
     la             - exa --all
     ll             - exa -l + icons + no user
     l1, l2, l3     - exa with tree different levels
+
+### CLI Tools
+
+#### TTYD
+
+#### BAT
+
+#### SKIM
+
+#### 
 
 ## HELIX Editor Bindings
 ### MOTIONS

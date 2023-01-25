@@ -8,3 +8,10 @@
     bindsym $mod+alt+b  exec flatpak run app/com.bitwarden.desktop/
     bindsym $mod+alt+z  exec flatpak run app/org.zotero.Zotero/
     bindsym $mod+alt+w exec flatpak run app/us.zoom.Zoom/
+
+### CLI TOOLS
+
+# TTYD Terminal in Browser start Headless
+    bindsym $mod+shift+i exec google-chrome-stable
+    bindsym $mod+ctrl+i  exec ttyd -t enableSixel=true -p 9001 zsh
+    
