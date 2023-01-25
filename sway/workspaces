@@ -13,8 +13,8 @@
     # mouse button for dragging.
     floating_modifier $mod normal
 
-workspace $1 output HDMI-1
-	#
+bindsym $mod+m sticky toggle
+#
 # Workspaces:
 #
     # Switch to workspace

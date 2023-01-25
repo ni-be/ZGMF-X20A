@@ -1,9 +1,9 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
-keybinds {i
+keybinds {
 
     // Lock Zellij
     locked {
-        bind "Ctrl g" { SwitchToMode "Tmux"; }
+        bind "Ctrl l" { SwitchToMode "Tmux"; }
         
     }
     normal {
@@ -43,11 +43,13 @@ keybinds {i
 
         //Session
         bind "Alt d" { Detach; }
+        //bind "Alt Delete" { Quit; }
+        bind "Alt m" { ToggleMouseMode; }
 
-    }
+           }
 
    // Resize Menu
-    pane {
+    session {
         bind "Esc" { SwitchToMode "Tmux"; }
         bind "h" { Resize "Increase Left"; }
         bind "j" { Resize "Increase Down"; }
@@ -61,16 +63,20 @@ keybinds {i
         bind "-" { Resize "Decrease"; }
         
         //Move 
-        //bind "n" "Tab" { MovePane; }
+        bind "n" "Tab" { MovePane; }
         bind "Alt h" { MovePane "Left"; }
         bind "Alt j" { MovePane "Down"; }
         bind "Alt k" { MovePane "Up"; }
         bind "Alt l" { MovePane "Right"; }
 
         //customize
-        bind "Alt 1" { TogglePaneFrames;}
-        bind "Alt 2" { TogglePaneEmbedOrFloating; SwitchToMode "Tmux"; }  
+        bind "Alt z" { TogglePaneFrames;}
+        bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Tmux"; }  
         bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Tmux"; } /// WHAT DOES IT DO????yc
+
+        
+        bind "Alt p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "Alt t" { SwitchToMode "RenameTab"; TabNameInput 0; }
         
     }
       scroll {
@@ -112,39 +118,24 @@ keybinds {i
         bind "Enter" { SwitchToMode "Tmux"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
-    session {
-        bind "p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-        bind "t" { SwitchToMode "RenameTab"; TabNameInput 0; }
-            }
-      shared_except "locked" {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
+
+
+    // Switch Modes and Shared Bindings
+    shared_except "locked" {
+        bind "Ctrl l" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-              bind "Alt =" "Alt +" { Resize "Increase"; }
-        bind "Alt -" { Resize "Decrease"; }
     }
-    shared_except "normal" "locked" "Tmux" {
+    shared_except "tmux" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Tmux"; }
     }
-    //shared_except "reseiz" "locked" {
-    //    bind "Ctrl p" { SwitchToMode "Pane"; }
-    //}
-    shared_except "pane" "locked" {
-        bind "Alt r" { SwitchToMode "Resize"; }
+    shared_except "search" "locked" {
+        bind "Alt `" { SwitchToMode "Search"; }
     }
     shared_except "scroll" "locked" {
         bind "Alt [" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "alt \" { SwitchToMode "Session"; }
-    }
-    //shared_except "tab" "locked" {
-    //    bind "Ctrl t" { SwitchToMode "Tab"; }
-    //}
-    shared_except "move" "locked" {
-        bind "Ctrl h" { SwitchToMode "Move"; }
-    }
-    shared_except "tmux" "locked" {
-        bind "Ctrl b" { SwitchToMode "Tmux"; }
+        bind "Alt ]" { SwitchToMode "Session"; }
     }
 }
 
@@ -173,6 +164,7 @@ simplified_ui false
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 //
+
 default_shell "zsh"
 
 // Toggle between having pane frames around the panes
@@ -181,39 +173,13 @@ default_shell "zsh"
 //   - false
 //
 // pane_frames false
-// Define color themes for Zellij
-// For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
-// Once these themes are defined, one of them should to be selected in the "theme" section of this file
-//
-themes {
-    tokyo-night-storm {
-        fg 169 177 214
-        bg 36 40 59
-        black 56 62 90
-        red 249 51 87
-        green 158 206 106
-        yellow 224 175 104
-        blue 122 162 247
-        magenta 187 154 247
-        cyan 42 195 222
-        white 192 202 245
-        orange 255 158 100
-    }
-}
 
-// Choose the theme that is specified in the themes section.
-// Default: default
-//
 theme "tokyo-night-storm"
 
-// The name of the default layout to load on startup
-// Default: "default"
-//
-// default_layout "compact"
+//default_layout "futsu"
 
-// Choose the mode that zellij uses when starting up.
-// Default: normal
 default_mode "Tmux"
+
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
 // potentially interfere with copying text.
@@ -221,7 +187,7 @@ default_mode "Tmux"
 //   - true (default)
 //   - false
 //
-mouse_mode true
+mouse_mode false
 
 // Configure the scroll back buffer size
 // This is the number of lines zellij stores for each pane in the scroll back
@@ -265,7 +231,7 @@ copy_command "wl-copy"                    // wayland
 // or should each user have their own cursor (false)
 // Default: false
 //
-// mirror_session true
+//mirror_session true
 
 // The folder in which Zellij will look for layouts
 //
@@ -273,4 +239,4 @@ layout_dir "~/.config/zellij/layout"
 
 // The folder in which Zellij will look for themes
 //
-// theme_dir "/path/to/my/theme_dir"
+theme_dir "~/.config/zellij/themes"
