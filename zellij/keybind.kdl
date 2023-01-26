@@ -1,7 +1,7 @@
 // KEYBINDINGS FILE FOR ZELLIJ
     // Lock Zellij
     locked {
-        bind "Ctrl l" { SwitchToMode "Normal"; }
+        bind "Alt #" { SwitchToMode "Normal"; }
         
     }
     normal  {
@@ -117,20 +117,20 @@
 
     // Switch Modes and Shared Bindings
     shared_except "locked" {
-        bind "Ctrl l" { SwitchToMode "Locked"; }
+        bind "Alt #" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
     }
     shared_except "Normal" "locked" {
-        bind "Esc" "Alt Down" { SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "search" "locked" {
-        bind "Alt Right" { SwitchToMode "Search"; }
+        bind "Alt !" { SwitchToMode "Search"; }
     }
     shared_except "scroll" "locked" {
-        bind "Alt Left" { SwitchToMode "Scroll"; }
+        bind "Alt @" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Alt Up" { SwitchToMode "Session"; }
+        bind "Alt $" { SwitchToMode "Session"; }
     }
 }
 
