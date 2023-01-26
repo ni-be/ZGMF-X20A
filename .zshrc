@@ -108,3 +108,7 @@ eval "$(starship init zsh)"
 #eval "$($(brew --prefix)/bin/brew shellenv)"
 #eval "$(zellij -s ogog子 setup --generate-auto-start zsh)"
 #source ~/.config/zsh/zellij_autostart
+# pnpm
+export PNPM_HOME="/home/nbertrand/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
