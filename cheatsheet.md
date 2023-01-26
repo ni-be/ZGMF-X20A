@@ -92,18 +92,18 @@ NO COnflict Alt-x	Shrink selection to line bounds (line-wise selection)
 NO Conflict Alt-(	Rotate selection contents backward
 NO COnflict Alt-)	Rotate selection contents forward
 
-CONFLICTS
+CONFLICTS ???
 Alt-J	Join lines inside selection and select space
 Alt-K	Remove selections matching the regex
 
-CONFLICTS
+CONFLICTS CTRL HJKL or up down left right
 Alt-o, Alt-up	Expand selection to parent syntax node (TS)
 Alt-i, Alt-down Shrink syntax tree object selection (TS)
 Alt-p, Alt-left	Select previous sibling node in syntax tree (TS)
 Alt-n, Alt-right	Select next sibling node in syntax tree (TS)
 
 CONFLICTS
-INSERT MODE
+INSERT MODE remove ctrl w  and alt d change to ctrl backspace and ctrl delete
 Ctrl-w, Alt-Backspace	Delete previous word
 Alt-d, Alt-Delete	Delete next word
 
