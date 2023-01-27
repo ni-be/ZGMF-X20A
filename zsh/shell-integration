@@ -24,3 +24,7 @@ TRAPUSR1() {
     /usr/bin/theme.sh tokyo-day
   fi
 }
+[ -f ~/.config/zsh/lf_icons ] && {
+	LF_ICONS="$(tr '\n' ':' <~/.config/zsh/lc_icons)" \
+		&& export LF_ICONS
+}

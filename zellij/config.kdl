@@ -47,9 +47,10 @@ keybinds {
     }
     session {
         bind "a" {
-        Run "zellij run -f ~/.cargo/bin/fx" {
-           }
-        }
+            Run "~/.config/zellij/scripts/test.sh" {
+            
+                } 
+            }
     }
     pane {
         bind "Esc" { SwitchToMode "Normal"; }

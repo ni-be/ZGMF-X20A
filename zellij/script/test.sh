@@ -1,0 +1,1 @@
+sk --ansi -i -c 'rg --color=always -l "{}"'

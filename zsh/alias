@@ -26,7 +26,7 @@ alias kot="code --"
 ###########################
 ##### ZELLIJ ##############
 ###########################
-
+alias fck="sk --ansi -i -c 'rg --color=always -l "{}"'"
 ##### Choose active session ### TODO CHARM - make it look nicer 
 alias ねね=". ~/.config/zellij/script/current-session.sh"
 

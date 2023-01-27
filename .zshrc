@@ -19,7 +19,8 @@ source ~/.config/zsh/shell-integration
 source ~/.config/zsh/alias
 source ~/.config/zsh/export
 source ~/.config/zsh/foot
-source ~/.config/zsh/lf-icons
+source ~/.config/zsh/n3
+
 
 _ZO_EXCLUDE_DIRS=""
 _ZO_RESOLVE_SYMLINKS=1
@@ -31,3 +32,22 @@ eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+
+
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+  
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+  # Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
