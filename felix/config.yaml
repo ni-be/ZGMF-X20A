@@ -10,8 +10,9 @@ exec:
      [jpg, jpeg, png, gif, svg]
    zathura:
      [pdf]
-   hx: 
-     [rs, txt, md, tex, py, ts, css, yaml, toml, c, cpp, h]
+   zellij action new-pane --: 
+    
+     [lp, kdl, rs, txt, md, tex, py, ts, css, yaml, toml, c, cpp, h]
 
 # (Optional)
 # Whether to use syntax highlighting in the preview mode.

@@ -1,0 +1,23 @@
+
+####################################################
+### EXPORTS ########################################
+####################################################
+export LANG=en_US.UTF-8
+
+export PNPM_HOME="/home/nbertrand/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=/home/nbertrand/.nimble/bin:$PATH
+export PATH=/home/nbertrand/.cargo/bin:$PATH
+export PATH=/var/lib/flatpak/exports/bin:$PATH
+
+export PATH=~/go/bin/:$PATH
+export GOPATH=/home/nbertrand/go:$GOPATH
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+
+export BARTIB_FILE="/home/nbertrand/SHOSAI/jinsei/time.md"
+export TODO_FILE="/home/nbertrand/SHOSAI/jinsei/todo/todo.txt"
+export DONE_FILE="/home/nbertrand/SHOSAI/jinsei/todo/done.txt"

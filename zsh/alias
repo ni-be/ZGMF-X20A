@@ -1,0 +1,85 @@
+###########################
+##### ALIAS     ###########
+## making life easier #####
+###########################
+
+alias peko="bartib"
+alias 字="jisho-cli"
+alias ji="jisho-cli"
+
+#### GIT 
+alias g="git"
+alias gdiff="git diff"
+
+
+####### EXA 
+alias ll='exa -l --icons --no-user --git'
+alias l1='exa --tree --level 1 --icons --git'
+alias l2='exa --tree --level 2 --icons --git'
+alias l3='exa --tree --level 3 --icons --git'
+alias ls='exa'
+alias la='exa --all'
+
+#### VS CODE 
+alias kot="code --"
+
+###########################
+##### ZELLIJ ##############
+###########################
+
+##### Choose active session ### TODO CHARM - make it look nicer 
+alias ねね=". ~/.config/zellij/script/current-session.sh"
+
+#run in floating window
+alias zrf="zellij run -f --"
+alias ね="zellij --layout ~/.config/zellij/layout/futsu.kdl"
+
+############################
+#### KNOWN Workspaces ######
+############################
+
+# LATEX repo -> nikolasbertrand/kaku 
+alias か="zellij --session 書く --layout kaku"
+
+#### Exercism
+alias す="zellij --session すいせい --layout suisei"
+
+#### Alias MetaTelingo Project
+alias め="zellij --session メターテリンゴ --layout metatel"
+
+### Note Taking
+alias 人生="zellij --session 人生 --layout jinsei"
+
+### QOL ###################
+
+# TTYD Terminal in browser
+
+alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+alias ttydk="ps -ef | rg ttyd"
+
+###########################
+## ssh login
+###########################
+あ() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/ghdev
+}
+い() {
+    git add --all
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push
+}
+## placeholder for further scripts
+#う
+#え
+#ア
+alias イ="gitui"
+#ウ
+#エ
+#オ
+
