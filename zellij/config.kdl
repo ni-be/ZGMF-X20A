@@ -4,7 +4,7 @@ keybinds {
 
     // Lock Zellij
     locked {
-        bind "Alt #" { SwitchToMode "Normal"; }
+        bind "Alt %" { SwitchToMode "Normal"; }
             
     }
     normal  {
@@ -44,9 +44,14 @@ keybinds {
         //bind "Alt Delete" { Quit; }
         //bind "Alt m" { ToggleMouseMode; }
 
-}
-// Resize Menu
+    }
     session {
+        bind "a" {
+        Run "zellij run -f ~/.cargo/bin/fx" {
+           }
+        }
+    }
+    pane {
         bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
         bind "j" { Resize "Increase Down"; }
@@ -119,7 +124,7 @@ keybinds {
 
     // Switch Modes and Shared Bindings
     shared_except "locked" {
-        bind "Alt #" { SwitchToMode "Locked"; }
+        bind "Alt %" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
     }
     shared_except "Normal" "locked" {
@@ -133,6 +138,9 @@ keybinds {
     }
     shared_except "session" "locked" {
         bind "Alt $" { SwitchToMode "Session"; }
+    }
+    shared_except "pane" "locked" {
+        bind "Alt #" { SwitchToMode "Pane";}
     }
 }
 
@@ -153,7 +161,7 @@ default_shell "zsh"
 
 theme "tokyo-night-storm"
 
-default_layout "~/.config/zellij/layout/futsu.kdl"
+default_layout "futsu"
 
 default_mode "Normal"
 

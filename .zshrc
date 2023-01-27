@@ -1,101 +1,106 @@
 source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+CASE_SENSITIVE="true"
 
-# Path to your oh-my-zsh installation.
-#export ZSH="$HOME/.oh-my-zsh"
+zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
 
-#ZSH_THEME="awesomepanda"
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+HIST_STAMPS="yyyy/mm/dd"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
- HIST_STAMPS="yyyy/mm/dd"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(git ssh-agent docker zsh-autosuggestions)
 
-#source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-#export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 export EDITOR='hx'
 # Compilation flags
 #export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-
 source ~/.config/zsh/shell-integration
-source ~/.config/zsh/exports
-source ~/.config/zsh/alias
-source ~/.config/zsh/zsh_profile
+
+###########################
+##### ALIAS     ###########
+## making life easier #####
+###########################
+
+alias peko="bartib"
+alias 字="jisho-cli"
+alias ji="jisho-cli"
+
+#### GIT 
+alias g="git"
+alias gdiff="git diff"
+
+
+####### EXA 
+alias ll='exa -l --icons --no-user --git'
+alias l1='exa --tree --level 1 --icons --git'
+alias l2='exa --tree --level 2 --icons --git'
+alias l3='exa --tree --level 3 --icons --git'
+alias ls='exa'
+alias la='exa --all'
+
+#### VS CODE 
+alias kot="code --"
+
+###########################
+##### ZELLIJ ##############
+###########################
+
+##### Choose active session ### TODO CHARM - make it look nicer 
+alias お=". ~/.config/zellij/script/current-session.sh"
+
+#run in floating window
+alias zrf="zelliabrt-action-analyze-vulnerabilityj run -f --"
+alias myu="zellij --layout ~/.config/zellij/layout/futsu.kdl"
+
+############################
+#### KNOWN Workspaces ######
+############################
+
+# LATEX repo -> nikolasbertrand/kaku 
+alias か="zellij --session 書く --layout kaku"
+
+#### Exercism
+alias す="zellij --session すいせい --layout suisei"
+
+#### Alias MetaTelingo Project
+alias め="zellij --session メターテリンゴ --layout metatel"
+
+### Note Taking
+alias 人生="zellij --session 人生 --layout jinsei"
+
+### QOL ###################
+
+# TTYD Terminal in browser
+
+alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+alias ttydk="ps -ef | rg ttyd"
+
+###########################
+## ssh login
+###########################
+あ() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/ghdev
+}
+い() {
+    git add --all
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push
+}
+## placeholder for further scripts
+#う
+#え
+#ア
+alias イ="gitui"
+#ウ
+#エ
+#オ
 
 _ZO_EXCLUDE_DIRS=""
 _ZO_RESOLVE_SYMLINKS=1
@@ -105,10 +110,60 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
-#eval "$($(brew --prefix)/bin/brew shellenv)"
-#eval "$(zellij -s ogog子 setup --generate-auto-start zsh)"
-#source ~/.config/zsh/zellij_autostart
-# pnpm
+
+####################################################
+### EXPORTS ########################################
+####################################################
+export LANG=en_US.UTF-8
+
 export PNPM_HOME="/home/nbertrand/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+
+export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=/home/nbertrand/.nimble/bin:$PATH
+export PATH=/home/nbertrand/.cargo/bin:$PATH
+export PATH=/var/lib/flatpak/exports/bin:$PATH
+
+export PATH=~/go/bin/:$PATH
+export GOPATH=/home/nbertrand/go:$GOPATH
+export GOROOT=$HOME/go
+export PATH=$PATH:$GOROOT/bin
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+export BARTIB_FILE="/home/nbertrand/SHOSAI/jinsei/time.md"
+export TODO_FILE="/home/nbertrand/SHOSAI/jinsei/todo/todo.txt"
+export DONE_FILE="/home/nbertrand/SHOSAI/jinsei/todo/done.txt"
+
+ if test -z "${XDG_RUNTIME_DIR}"; then
+     export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+     if ! test -d "${XDG_RUNTIME_DIR}"; then
+         mkdir "${XDG_RUNTIME_DIR}"
+         chmod 0700 "${XDG_RUNTIME_DIR}"
+     fi
+ fi
+ function osc7 {
+      local LC_ALL=C
+      export LC_ALL
+  
+      setopt localoptions extendedglob
+      input=( ${(s::)PWD} )
+      uri=${(j::)input/(#b)([^A-Za-z0-9_.\!~*\'\(\)-\/])/%${(l:2::0:)$(([##16]#match))}}
+      print -n "\e]7;file://${HOSTNAME}${uri}\e\\"
+ }
+ add-zsh-hook -Uz chpwd osc7
+ 
+ 
+ precmd() {
+      print -Pn "\e]133;A\e\\"
+ }
+  
+ TRAPUSR1() {
+    if [ "$scheme" = "night" ];then
+      /usr/bin/theme.sh tokyo-storm
+    elif [ "$scheme" = "day" ]; then
+      /usr/bin/theme.sh tokyo-day
+  fi
+  }
