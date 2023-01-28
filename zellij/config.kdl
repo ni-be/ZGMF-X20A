@@ -1,6 +1,6 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 
-keybinds {
+keybinds clear-defaults=true{
 
     // Lock Zellij
     locked {
@@ -42,26 +42,19 @@ keybinds {
         //Session
         bind "Alt `" { Detach; }
         //bind "Alt Delete" { Quit; }
-        //bind "Alt m" { ToggleMouseMode; }
-
+        //bind "Alt m" { ToggleMouseMode; 
     }
+    
     session {
-        bind "n" {
-            NewTab {
-                cwd "/tmp"
-                layout "/home/nbertrand/ZGMF-X20A/zellij/layouts/jinsei.kdl"
-                name "Hello"
-            };
-            //SwitchToMode "Normal"; 
+        // OPENING A HX for quick notes in the correct repo
+        bind "の" {
+        Run "hx" "/home/nbertrand/SHOSAI/jinsei" ; SwitchToMode "Normal"; 
         }
-        bind "a" {
-            NewPane {
-                cwd "/home/nbertrand/SHOSAI/jinseii"
-                name "TUI"
-                command "fx" 
-            };
+        bind "じ" {
+            Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";
         }
-   }
+        bind "m" { ToggleMouseMode;}
+        }
     pane {
         bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
