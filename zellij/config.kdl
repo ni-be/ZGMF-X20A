@@ -4,7 +4,7 @@ keybinds {
 
     // Lock Zellij
     locked {
-        bind "Alt %" { SwitchToMode "Normal"; }
+        bind "F5" { SwitchToMode "Normal"; }
             
     }
     normal  {
@@ -46,11 +46,11 @@ keybinds {
 
     }
     session {
-        bind "a" {
-            Run "~/.config/zellij/scripts/test.sh" {
+        // bind "a" {
+        //     Run "あ" {
             
-                } 
-            }
+        //         } 
+        //     }
     }
     pane {
         bind "Esc" { SwitchToMode "Normal"; }
@@ -125,23 +125,23 @@ keybinds {
 
     // Switch Modes and Shared Bindings
     shared_except "locked" {
-        bind "Alt %" { SwitchToMode "Locked"; }
+        bind "F5" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
     }
     shared_except "Normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "search" "locked" {
-        bind "Alt @" { SwitchToMode "Search"; }
+        bind "F2" { SwitchToMode "Search"; }
     }
     shared_except "scroll" "locked" {
-        bind "Alt !" { SwitchToMode "Scroll"; }
+        bind "F1" { SwitchToMode "Scroll"; }
     }
     shared_except "session" "locked" {
-        bind "Alt $" { SwitchToMode "Session"; }
+        bind "F4" { SwitchToMode "Session"; }
     }
     shared_except "pane" "locked" {
-        bind "Alt #" { SwitchToMode "Pane";}
+        bind "F3" { SwitchToMode "Pane";}
     }
 }
 

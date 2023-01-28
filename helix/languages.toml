@@ -5,12 +5,14 @@ file-types = ["lp"]
 comment-token = "%"
 roots = []
 indent = { tab-width = 2, unit = "  "}
-language-server = { command = "asp-language-server"}
-
+language-server = { command = "/home/nbertrand/LSP/asp-language-server/target/debug/asp-language-server"}
 
 [[grammar]]
-name = "clingo"
-source = {git = "https://github.com/nikolasbertrand/tree-sitter-clingo", rev = "1776564ed82f7c2d89dc38a86c68f18c9b863681"}
+name ="clingo"
+source ={ name= "/home/nbertrand/LSP/asp-language-server" }
+#source = #source = { subpath ="/home/nbertrand/LSP/asp-language-server/target/debug"} 
+
+
 #source = {src ="/home/nbertrand/.config/helix/runtime/tree-sitter-clingo"}
 
 [[language]]

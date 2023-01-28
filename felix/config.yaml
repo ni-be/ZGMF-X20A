@@ -8,11 +8,10 @@ default: hx
 exec:
    feh:
      [jpg, jpeg, png, gif, svg]
-   zathura:
+   okular:
      [pdf]
-   zellij action new-pane --: 
-    
-     [lp, kdl, rs, txt, md, tex, py, ts, css, yaml, toml, c, cpp, h]
+   hx: 
+    [lp, kdl, rs, txt, md, tex, py, ts, css, yaml, toml, c, cpp, h]
 
 # (Optional)
 # Whether to use syntax highlighting in the preview mode.

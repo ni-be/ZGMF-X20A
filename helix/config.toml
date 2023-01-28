@@ -3,7 +3,7 @@ theme = "tokyonight_storm"
 
 [editor]
 line-number = "relative"
-mouse = true
+mouse = false
 middle-click-paste = true
 auto-completion = true
 

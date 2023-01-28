@@ -8,11 +8,28 @@ alias 字="jisho-cli"
 alias ji="jisho-cli"
 
 #### GIT 
-alias g="git"
-alias gdiff="git diff"
 
 
-####### EXA 
+あ() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/ghdev
+}
+
+い() {
+    git add --all
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push
+}
+
+alias う="gitui"
+
+
+#### EXA 
 alias ll='exa -l --icons --no-user --git'
 alias l1='exa --tree --level 1 --icons --git'
 alias l2='exa --tree --level 2 --icons --git'
@@ -23,20 +40,27 @@ alias la='exa --all'
 #### VS CODE 
 alias kot="code --"
 
+alias zathura='tabbed -c -r 2 zathura -e id'
 ###########################
 ##### ZELLIJ ##############
 ###########################
-alias fck="sk --ansi -i -c 'rg --color=always -l "{}"'"
-##### Choose active session ### TODO CHARM - make it look nicer 
-alias ねね=". ~/.config/zellij/script/current-session.sh"
+
+# FUZZY SEARCHES USING SKIM
+
+alias ア="fx ~/SHOSAI/hiyori"
+#alias オ="
+#エ
+#オ
 
 #run in floating window
 alias zrf="zellij run -f --"
-alias ね="zellij --layout ~/.config/zellij/layout/futsu.kdl"
 
-############################
-#### KNOWN Workspaces ######
-############################
+##### Choose active session ### TODO CHARM - make it look nicer 
+alias ねね=". ~/.config/zellij/script/current-session.sh"
+alias ね="zellij --layout futsu"
+
+#####################
+# Sessions/Workspaces
 
 # LATEX repo -> nikolasbertrand/kaku 
 alias か="zellij --session 書く --layout kaku"
@@ -50,10 +74,11 @@ alias め="zellij --session メターテリンゴ --layout metatel"
 ### Note Taking
 alias 人生="zellij --session 人生 --layout jinsei"
 
-### QOL ###################
+
+
+##### ETC 
 
 # TTYD Terminal in browser
-
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
 
@@ -64,22 +89,4 @@ alias ttydk="ps -ef | rg ttyd"
     eval $(ssh-agent -s)
     ssh-add ~/.ssh/ghdev
 }
-い() {
-    git add --all
-    if [ "$1" != "" ] # or better, if [ -n "$1" ]
-    then
-        git commit -m "$1"
-    else
-        git commit -m update
-    fi
-    git push
-}
-## placeholder for further scripts
-#う
-#え
-#ア
-alias イ="gitui"
-#ウ
-#エ
-#オ
 

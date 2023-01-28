@@ -19,8 +19,6 @@ source ~/.config/zsh/shell-integration
 source ~/.config/zsh/alias
 source ~/.config/zsh/export
 source ~/.config/zsh/foot
-source ~/.config/zsh/n3
-
 
 _ZO_EXCLUDE_DIRS=""
 _ZO_RESOLVE_SYMLINKS=1
@@ -51,3 +49,5 @@ export FZF_CTRL_R_OPTS="
 
   # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

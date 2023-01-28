@@ -13,6 +13,8 @@ export PATH=/home/nbertrand/.nimble/bin:$PATH
 export PATH=/home/nbertrand/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
 
+export PATH=/home/nbertrand/LSP/asp-language-server/target/debug:$PATH
+
 export PATH=~/go/bin/:$PATH
 export GOPATH=/home/nbertrand/go:$GOPATH
 export GOROOT=$HOME/go

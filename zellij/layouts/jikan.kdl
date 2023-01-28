@@ -1,0 +1,9 @@
+layout {
+	tab_template name="時間" split_direction="vertical" {
+	    pane size="25%"name="ペコ"
+		pane size="25%" name="タダ"	command="tada" arg="showi"
+		pane size="50%" name="早ノート" edit="~/SHOSAI/jinsei/quicki"	
+	
+    }
+		
+}
