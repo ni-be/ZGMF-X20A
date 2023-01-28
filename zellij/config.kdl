@@ -53,8 +53,19 @@ keybinds clear-defaults=true{
         bind "じ" {
             Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";
         }
-        bind "m" { ToggleMouseMode;}
+        bind "m" { ToggleMouseMode;
         }
+        bind "h" {
+            Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl"; SwitchToMode "Normal";
+
+        }
+        bind "?" {
+            Run "bat" "/home/nbertrand/ZGMF-X20A/zsh/alias"; SwitchToMode "Normal";
+        }
+        bind "s" {
+            Run "fx" "/home/nbertrand/XVX-016/sway"; SwitchToMode "Normal";
+        }
+    }
     pane {
         bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
