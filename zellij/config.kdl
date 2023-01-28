@@ -46,12 +46,22 @@ keybinds {
 
     }
     session {
-        // bind "a" {
-        //     Run "あ" {
-            
-        //         } 
-        //     }
-    }
+        bind "n" {
+            NewTab {
+                cwd "/tmp"
+                layout "/home/nbertrand/ZGMF-X20A/zellij/layouts/jinsei.kdl"
+                name "Hello"
+            };
+            //SwitchToMode "Normal"; 
+        }
+        bind "a" {
+            NewPane {
+                cwd "/home/nbertrand/SHOSAI/jinseii"
+                name "TUI"
+                command "fx" 
+            };
+        }
+   }
     pane {
         bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
