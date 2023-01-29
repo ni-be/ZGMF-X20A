@@ -1,0 +1,23 @@
+layout {
+	default_tab_template {
+       children
+        pane size=2 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+	// Gloab working directory
+	cwd "/home/nbertrand/theArchive"
+	tab name="第1" split_direction="vertical" {
+	
+        pane size="50%" name="main" cwd="/home/nbertrand/theArchive" command="fx"{
+			
+		}
+		pane size="50%" split_direction="horizontal" {
+			pane name="第2" command="fx" size="70%"
+			pane name="振舞い試験" size="30%"
+		}
+	}
+	tab name="ジット" {
+		pane name="Git" command="gitui"
+	}
+}
