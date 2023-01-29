@@ -1,7 +1,13 @@
 keybinds clear-defaults=true {
-    locked { bind "Alt b" { SwitchToMode "Normal"; }}
-    normal { bind "Ctrl b" {SwitchToMode "Tmux";}}
-    tmux { // Pane and Tab creation and closure
+    locked { 
+        bind "Alt b" { SwitchToMode "Normal";}
+            
+    }
+    normal { 
+        bind "Ctrl b" {SwitchToMode "Tmux";}
+    }
+    tmux { 
+        // Pane and Tab creation and closure
         bind "w" { NewPane "Right"; SwitchToMode "Normal";}
         bind "W" { NewPane "Down"; SwitchToMode "Normal";}
         bind "t" { NewTab; SwitchToMode "Normal";}
@@ -91,7 +97,7 @@ keybinds clear-defaults=true {
     shared_except "locked" "entersearch" {
         bind "Alt b" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Esc" {SwitchToMode "Normal"}
+        bind "Esc" {SwitchToMode "Normal";}
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
