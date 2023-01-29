@@ -94,10 +94,12 @@ keybinds clear-defaults=true {
         bind "Enter" { SwitchToMode "Normal"; }
     }
     // Switch Modes and Shared Bindings
+    shared_except "Normal" "locked" "entersearch" {
+        bind "Esc" {SwitchToMode "Normal"l}
+    }
     shared_except "locked" "entersearch" {
         bind "Alt b" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Esc" {SwitchToMode "Normal";}
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
         bind "Alt 3" { GoToTab 3; }
