@@ -1,73 +1,34 @@
-// If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
-
-keybinds clear-defaults=true{
-
-    // Lock Zellij
-    locked {
-        bind "F5" { SwitchToMode "Normal"; }
-            
-    }
-    normal  {
-        // Pane and Tab creation and closure
-        bind "Alt w" { NewPane "Right";}
-        bind "Alt W" { NewPane "Down";}
-        bind "Alt t" { NewTab;}
-        bind "Alt q" { CloseFocus;}
-        bind "Alt Q" { CloseTab;}
-
+keybinds clear-defaults=true {
+    locked { bind "Alt b" { SwitchToMode "Normal"; }}
+    normal { bind "Ctrl b" {SwitchToMode "Tmux";}}
+    tmux { // Pane and Tab creation and closure
+        bind "w" { NewPane "Right"; SwitchToMode "Normal";}
+        bind "W" { NewPane "Down"; SwitchToMode "Normal";}
+        bind "t" { NewTab; SwitchToMode "Normal";}
+        bind "q" { CloseFocus; SwitchToMode "Normal";}
+        bind "Q" { CloseTab; SwitchToMode "Normal";}
         // Float + Fullscreen
-        bind "Alt f" {ToggleFloatingPanes;}
-        bind "Alt F" { ToggleFocusFullscreen;}
-        
-        // Pane focus Switch 
-        bind "Alt h" { MoveFocus "Left"; }
-        bind "Alt l" { MoveFocus "Right"; }
-        bind "Alt j" { MoveFocus "Down"; }
-        bind "Alt k" { MoveFocus "Up"; }
-        //bind "Alt p" { SwitchFocus; }
-
-        // Tab Switcheroo
-        bind "Alt H" "Alt K" { GoToPreviousTab; }
-        bind "Alt L" "Alt J" { GoToNextTab; }        
-        bind "Alt 1" { GoToTab 1; }
-        bind "Alt 2" { GoToTab 2; }
-        bind "Alt 3" { GoToTab 3; }
-        bind "Alt 3" { GoToTab 4; }
-        bind "Alt 4" { GoToTab 5; }
-        bind "Alt 6" { GoToTab 6; }
-        bind "Alt 7" { GoToTab 7; }
-        bind "Alt 8" { GoToTab 8; }
-        bind "Alt 9" { GoToTab 9; }
-
+        bind "f" {ToggleFloatingPanes; SwitchToMode "Normal";}
+        bind "F" { ToggleFocusFullscreen; SwitchToMode "Normal";}   
+        // Pane / Tab Switcheroo 
+        bind "h" { MoveFocus "Left"; }
+        bind "l" { MoveFocus "Right"; }
+        bind "j" { MoveFocus "Down"; }
+        bind "k" { MoveFocus "Up"; }
+        bind "p" { SwitchFocus; }
+        bind "H" { GoToPreviousTab; }
+        bind "J" { GoToNextTab; }              
         //Session
-        bind "Alt `" { Detach; }
-        //bind "Alt Delete" { Quit; }
-        //bind "Alt m" { ToggleMouseMode; 
-    }
-    
-    session {
+        bind "d" { Detach; }
         // OPENING A HX for quick notes in the correct repo
-        bind "の" {
-        Run "hx" "/home/nbertrand/SHOSAI/jinsei" ; SwitchToMode "Normal"; 
-        }
-        bind "じ" {
-            Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";
-        }
-        bind "m" { ToggleMouseMode;
-        }
-        bind "h" {
-            Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl"; SwitchToMode "Normal";
-
-        }
-        bind "?" {
-            Run "bat" "/home/nbertrand/ZGMF-X20A/zsh/alias"; SwitchToMode "Normal";
-        }
-        bind "s" {
-            Run "fx" "/home/nbertrand/XVX-016/sway"; SwitchToMode "Normal";
-        }
-    }
+        bind "の" { Run "hx" "/home/nbertrand/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
+        bind "じ" { Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";}    
+        //functions QOL , keybindings
+        bind "m" { ToggleMouseMode;}
+        bind "/" { Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl"; SwitchToMode "Normal";}
+        bind "?" { Run "bat" "/home/nbertrand/ZGMF-X20A/zsh/alias"; SwitchToMode "Normal";}
+    } 
     pane {
-        bind "Esc" { SwitchToMode "Normal"; }
         bind "h" { Resize "Increase Left"; }
         bind "j" { Resize "Increase Down"; }
         bind "k" { Resize "Increase Up"; }
@@ -77,27 +38,21 @@ keybinds clear-defaults=true{
         bind "K" { Resize "Decrease Up"; }
         bind "L" { Resize "Decrease Right"; }
         bind "=" "+" { Resize "Increase"; }
-        bind "-" { Resize "Decrease"; }
-        
+        bind "-" { Resize "Decrease"; }  
         //Move 
         bind "n" "Tab" { MovePane; }
         bind "Alt h" { MovePane "Left"; }
         bind "Alt j" { MovePane "Down"; }
         bind "Alt k" { MovePane "Up"; }
         bind "Alt l" { MovePane "Right"; }
-
         //customize
-        bind "Alt z" { TogglePaneFrames;}
-        bind "Alt e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }  
-        bind "Alt s" { ToggleActiveSyncTab; SwitchToMode "Normal"; } /// WHAT DOES IT DO????yc
-
-        
-        bind "Alt p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
-        bind "Alt t" { SwitchToMode "RenameTab"; TabNameInput 0; }
-        
-    }
+        bind "z" { TogglePaneFrames; SwitchToMode "Normal";}
+        bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }  
+        bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; } /// WHAT DOES IT DO????yc
+        bind "p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+        bind "t" { SwitchToMode "RenameTab"; TabNameInput 0; }
+    } 
     scroll {
-        bind "Esc" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
@@ -107,9 +62,8 @@ keybinds clear-defaults=true{
         bind "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }        
         bind "u" { HalfPageScrollUp; }
-    }
+    } 
     search {
-        bind "Esc" { SwitchToMode "Normal"; }
         bind "b" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" { ScrollDown; }
         bind "k" { ScrollUp; }
@@ -122,28 +76,34 @@ keybinds clear-defaults=true{
         bind "c" { SearchToggleOption "CaseSensitivity"; }
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
-    }
+    } 
     entersearch clear-defaults=true {
         bind "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
-    }
+    } 
     renametab clear-defaults=true {
         bind "Enter" { SwitchToMode "Normal"; }
-        bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
     renamepane clear-defaults=true {
         bind "Enter" { SwitchToMode "Normal"; }
-        bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
-
-
     // Switch Modes and Shared Bindings
-    shared_except "locked" {
-        bind "F5" { SwitchToMode "Locked"; }
+    shared_except "locked" "entersearch" {
+        bind "Alt b" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
+        bind "Esc" {SwitchToMode "Normal"}
+        bind "Alt 1" { GoToTab 1; }
+        bind "Alt 2" { GoToTab 2; }
+        bind "Alt 3" { GoToTab 3; }
+        bind "Alt 4" { GoToTab 4; }
+        bind "Alt 5" { GoToTab 5; }
+        bind "Alt 6" { GoToTab 6; }
+        bind "Alt 7" { GoToTab 7; }
+        bind "Alt 8" { GoToTab 8; }
+        bind "Alt 9" { GoToTab 9; }     
     }
     shared_except "Normal" "locked" {
-        bind "Esc" { SwitchToMode "Normal"; }
+        bind "Esc" { SwitchToMode "Locked"; }
     }
     shared_except "search" "locked" {
         bind "F2" { SwitchToMode "Search"; }
@@ -151,52 +111,37 @@ keybinds clear-defaults=true{
     shared_except "scroll" "locked" {
         bind "F1" { SwitchToMode "Scroll"; }
     }
-    shared_except "session" "locked" {
-        bind "F4" { SwitchToMode "Session"; }
+    shared_except "tmux" "locked" {
+        bind "Ctrl B" { SwitchToMode "Tmux"; }
     }
     shared_except "pane" "locked" {
-        bind "F3" { SwitchToMode "Pane";}
+        bind "Ctrl r" { SwitchToMode "Pane";}
     }
 }
-
 plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
     strider { path "strider"; }
     compact-bar { path "compact-bar"; }
 }
-
 on_force_close "detach" // or quit when SIGTERM, SIGINT, SIGQUIT SIGHUP
-
 simplified_ui false // true
-
 default_shell "zsh"
-
 // pane_frames false // true
-
 theme "tokyo-night-storm"
-
 default_layout "futsu"
-
 default_mode "Normal"
-
 mouse_mode false // true (default)
-
 scroll_buffer_size 10000
-
 // copy_command "xclip -selection clipboard" // x11
-copy_command "wl-copy"                    // wayland
+//copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 //copy_clipboard "primary" // system (default)
-
 // copy_on_select false // true
-
 // scrollback_editor "/usr/bin/vim" //default : $EDITOR or $VISUAL
-
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
-//
 // mirror_session true // default false
 // layout_dir "~/.config/zellij/layout"
 theme_dir "~/.config/zellij/themes"
