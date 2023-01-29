@@ -95,7 +95,7 @@ keybinds clear-defaults=true {
     }
     // Switch Modes and Shared Bindings
     shared_except "Normal" "locked" "entersearch" {
-        bind "Esc" {SwitchToMode "Normal"l}
+        bind "Esc" {SwitchToMode "Normal";}
     }
     shared_except "locked" "entersearch" {
         bind "Alt b" { SwitchToMode "Locked"; }
