@@ -74,7 +74,8 @@ alias め="zellij --session メターテリンゴ --layout metatel"
 ### Note Taking
 alias 人生="zellij --session 人生 --layout jinsei"
 
-
+### theArchive
+alias の="zellij --session ノエル --layout noel"
 
 ##### ETC 
 
