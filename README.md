@@ -22,10 +22,11 @@
 
 # Programs used
 
-## Rust based 
+## Programs used -> might have some alias etc in config
     skim  : fuzzy finder (Cargo)
     bat   : cat  (Cargo)
     fd    : find (Cargo)
+    rip   : rm replacement
     zoxide: cd  (Cargo)
     ytop   : htop   (Cargo)
     felix : TUI file manager (Cargo)
@@ -35,11 +36,12 @@
 
     Zellij : Multiplexer (Cargo)
     Helix  : Text Editor (Package Manager)
+    NVIM   : Backup text editor
 
-## Others
+# TOOLS currently in testing
 
-    NVIM : backup and for some features not yet implemented in Helix  nim lsp
-
+    micro : text editor supposedly like nano    
+    Tmux  : backup for Zellij wish Zellij had a way to long term store sessions (shutdown)
 # Goal
     Reduce mouse usage as much as possible. And be as portable as possible
 
@@ -49,5 +51,5 @@
      - [ ] Improve this README. 
      - [ ] Mastadon -> CLI TUI ?
      - [ ] Matrix chat -> CLI ? 
-     - [ ] Find a wrapper for Web apps currently solely installed google-chrome for ZOOM, Slack, etc. Telegram, Whatsapp 
+
     
