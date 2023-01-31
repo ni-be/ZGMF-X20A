@@ -51,3 +51,5 @@ export FZF_CTRL_R_OPTS="
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /home/nbertrand/.config/broot/launcher/bash/br
