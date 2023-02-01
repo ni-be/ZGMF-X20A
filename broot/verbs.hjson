@@ -47,11 +47,12 @@ verbs: [
         execution: "zellij action new-pane -- hx {file}"
         leave_broot: false
     }
+    # Open PDF to the side
     {
-        invocation: Zellij new pane down 
-        key: alt-W
-        shortcut: zpf
-        execution: "zellij action new-pane -f -- hx {file}"
+        invocation : Zathura
+        key: alt-P
+        shortcut: zpdf
+        execution: "zathura --fork {file}"
         leave_broot: false
     }   
     # A convenient shortcut to create new text files in

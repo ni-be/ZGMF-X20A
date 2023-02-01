@@ -20,36 +20,59 @@
 <br />
 
 
-# Programs used
+# Programs used -> might have some alias etc in config:
+      - skim
+      - bat
+      - fd
+      - rip
+      - ripgrep
+      - broot
+      - ytop, htop
+      - broot
+      - gitui
+      - teeldear
+      - exa 
+      - lazydocker
+      - tokei     | https://github.com/XAMPPRocky/tokei  
+      - xxh      | https://github.com/xxh/xxh
+      
+# Shell Tools 
+      - ZSH
+      - autosuggestions, 
+      - zoxide 
+      - starship  | https://github.com/starship/starship
+    
+# Productivity Tools (Todo etc. )
+      - bartib    | https://github.com/nikolassv/bartibi
+      - tada - todo 
+      - jisho-cli | https://github.com/JojiiOfficial/jisho-cli
+# Text Editors
+      - Helix (primary)
+      - nvim (backup)
 
-## Programs used -> might have some alias etc in config
-    skim  : fuzzy finder (Cargo)
-    bat   : cat  (Cargo)
-    fd    : find (Cargo)
-    rip   : rm replacement
-    zoxide: cd  (Cargo)
-    ytop   : htop   (Cargo)
-    felix : TUI file manager (Cargo)
-    jisho-cli : CLI for Jisho.org (Cargo)
-    bartib : Time tracking (Cargo)
-    Tada : Todo  (cargo)
+# Mutliplexer
+      - Zellij 
 
-    Zellij : Multiplexer (Cargo)
-    Helix  : Text Editor (Package Manager)
-    NVIM   : Backup text editor
-
-# TOOLS currently in testing
-
-    micro : text editor supposedly like nano    
-    Tmux  : backup for Zellij wish Zellij had a way to long term store sessions (shutdown)
+# Terminals 
+      - Foot
+      - Wezterm (in testing)
+# PDF
+      - Zathura
+      - termpdf (in testing)
+ 
 # Goal
     Reduce mouse usage as much as possible. And be as portable as possible
 
-# TODO
-     - [ ] Move Emails from Google Workspace and domains to Porkbun -> host emails -> use Neomutt for emails 
-     - [ ] Reduce amount of ZSH alias add more in form of templates to Zellij config as keybindings
-     - [ ] Improve this README. 
-     - [ ] Mastadon -> CLI TUI ?
-     - [ ] Matrix chat -> CLI ? 
+# Currently in Testing or to tested
+    - podman   | https://github.com/containers/podman
+    - sad      | https://github.com/ms-jpq/sad
+    - zola
+    - xsv      | https://github.com/BurntSushi/xsv
 
+
+
+# TODO
+    - [ ] add tool into broot config (file management)
+    - [ ] create possible alias
+    - [ ] some bash scripting
     

@@ -17,10 +17,10 @@ keybinds clear-defaults=true {
         bind "f" {ToggleFloatingPanes; SwitchToMode "Normal";}
         bind "F" { ToggleFocusFullscreen; SwitchToMode "Normal";}   
         // Pane / Tab Switcheroo 
-        bind "h" { MoveFocus "Left"; }
-        bind "l" { MoveFocus "Right"; }
-        bind "j" { MoveFocus "Down"; }
-        bind "k" { MoveFocus "Up"; }
+        // bind "h" { MoveFocus "Left"; }
+        // bind "l" { MoveFocus "Right"; }
+        // bind "j" { MoveFocus "Down"; }
+        // bind "k" { MoveFocus "Up"; }
         bind "p" { SwitchFocus; }
         bind "H" { GoToPreviousTab; }
         bind "J" { GoToNextTab; }              
@@ -111,7 +111,11 @@ keybinds clear-defaults=true {
         bind "Alt 6" { GoToTab 6; }
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
-        bind "Alt 9" { GoToTab 9; }     
+        bind "Alt 9" { GoToTab 9; }    
+        bind "Alt h" { MoveFocus "Left"; }
+        bind "Alt l" { MoveFocus "Right"; }
+        bind "Alt j" { MoveFocus "Down"; }
+        bind "Alt k" { MoveFocus "Up"; }
     }
     shared_except "Normal" "locked" {
         bind "Esc" { SwitchToMode "Normal"; }
