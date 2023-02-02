@@ -1,0 +1,18 @@
+sudo dnf update
+Z Zellij
+clingo prev_cases/prev1.lp --output=reify | clingo - mod_meta/mod_meta-telingo.lp -c horizon=3 0  
+clingo prev_cases/prev1.lp --output=reify | clingo - mod_meta/mod_meta-telingo.lp -c horizon=100 0 
+clingo prev_cases/prev1.lp --output=reify  
+broot
+z hello
+cd ../../
+bat 
+la
+ls
+cd ../../../
+cd nbertrand/
+ls
+cd excercism
+cd exercism
+ls
+bat python/hello-world/hello_world_test.py
