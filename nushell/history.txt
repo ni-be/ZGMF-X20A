@@ -16,3 +16,36 @@ cd excercism
 cd exercism
 ls
 bat python/hello-world/hello_world_test.py
+ls
+ls .config
+fzf
+fd *.pdf | sk -m
+z 
+cd SHOSAI/hiyori/
+fd *.pdf MAPF/mapf pdf | sk -m
+fd *.pdf /MAPF/mapf pdf 
+fd pdf /MAPF/mapf pdf 
+fd pdf `MAPF/mapf pdf/` 
+fd pdf `MAPF/mapf pdf/` | sk -m
+fd pdf `MAPF/mapf pdf/` | ls
+fd pdf `MAPF/mapf pdf/` | ls -a
+fd pdf `MAPF/mapf pdf/` | la
+fd pdf `MAPF/mapf pdf/` | ls
+fd pdf `MAPF/mapf pdf/` > ls
+fd pdf `MAPF/mapf pdf/` 
+htop
+zoxide
+broot
+sh 
+cd ZGMF-X20A
+cd ~/ZGMF-X20A
+tldr
+tldr -l
+tldr
+tldr cargo
+z ASP
+hx source ~/.cache/starship/init.nu
+tokei
+zellij
+z ZGMF-X20A/
+cd ZGMF-X20A/
