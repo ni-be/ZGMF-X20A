@@ -1,0 +1,23 @@
+layout {
+	
+    cwd "/home/nbertrand/ASP/thesis-prep"
+	default_tab_template {
+        children
+        pane size=2 borderless=true {
+            plugin location="zellij:compact-bar"
+        }
+    }
+	// Gloab working directory
+	//cwd "/home/nbertrand/SHOSAI/kaku"
+	tab name="MAIN" split_direction="vertical" {
+	    pane name="書く"
+			
+	
+    }
+	tab name="FILES"{
+		pane name="ファイル" command="broot"
+	}
+	tab name="GIT" {
+		pane name="ギット" command="gitui"
+	}
+}

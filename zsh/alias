@@ -60,6 +60,8 @@ alias ね="zellij --layout futsu"
 
 #####################
 # Sessions/Workspaces
+# MSC THESIS 
+alias 残酷="zellij --session 地獄 --layout zankoku"
 
 # LATEX repo -> nikolasbertrand/kaku 
 alias か="zellij --session 書く --layout kaku"
