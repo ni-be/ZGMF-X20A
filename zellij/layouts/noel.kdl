@@ -9,11 +9,11 @@ layout {
 	cwd "/home/nbertrand/theArchive"
 	tab name="第1" split_direction="vertical" {
 	
-        pane size="50%" name="main" cwd="/home/nbertrand/theArchive" command="fx"{
+        pane size="50%" name="main" cwd="/home/nbertrand/theArchive" command="broot"{
 			
 		}
 		pane size="50%" split_direction="horizontal" {
-			pane name="第2" command="fx" size="70%"
+			pane name="第2" command="broot" size="70%"
 			pane name="振舞い試験" size="30%"
 		}
 	}

@@ -9,18 +9,18 @@ layout {
 	cwd "/home/nbertrand/ASP/telingo-wise22-23-team0"
 	tab name="CwD" split_direction="vertical" {
 	
-        pane size="50%" name="main" command="fx"{
+        pane size="50%" name="main" {
 			
 		}
 		pane size="50%" split_direction="horizontal" {
-			pane name="TESTS" command="fx" size="60%"
-			pane name="cmd" size="40%"
+			pane name="References" command="broot" size="60%"
+			pane name="SHELL" size="40%"
 			}
 	}
 	
 	tab name="Meta Telingo" split_direction="vertical" {
 		pane name="META FILE" edit="/home/nbertrand/ASP/telingo-wise22-23-team0/tests/niko/mod_meta/mod_meta-telingo.lp"
-		pane name="secondary" command="fx"
+		pane name="secondary" command="broot"
 	}
 	tab name="Git" {
 		pane name="Git" command="gitui"

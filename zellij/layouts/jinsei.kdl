@@ -8,14 +8,11 @@ layout {
 	// Gloab working directory
 	cwd "/home/nbertrand/SHOSAI/jinsei"
 	tab name="NOTES" split_direction="vertical" {
-		pane size="20%" name="ソトライダー" {
-			plugin location="zellij:strider"
-		}
-       	pane size="80%" name="ノート" cwd="notes" command="fx"
+       	pane name="ノート" cwd="notes" command="hx"
 		
     }
 	tab name="PDF" {
-		pane name="ファイル" cwd="pdf" command="fx"
+		pane name="ファイル" cwd="/home/nbertrand/SHOSAI/hiyori" command="broot"
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"

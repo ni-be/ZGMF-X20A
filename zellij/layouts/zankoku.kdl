@@ -7,15 +7,14 @@ layout {
             plugin location="zellij:compact-bar"
         }
     }
-	// Gloab working directory
-	//cwd "/home/nbertrand/SHOSAI/kaku"
-	tab name="MAIN" split_direction="vertical" {
+	tab name="MAIN" {
 	    pane name="書く"
 			
 	
     }
-	tab name="FILES"{
-		pane name="ファイル" command="broot"
+	tab name="FILES" split_direction="vertical" {
+			pane size="50%" name="残酷の" command="broot"
+			pane size="50%" name="ひより" cwd="/home/nbertrand/SHOSAI/hiyori" command="broot"
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"
