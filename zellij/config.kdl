@@ -1,39 +1,32 @@
 keybinds clear-defaults=true {
     locked { 
-        bind "Alt b" { SwitchToMode "Normal";}
+        bind "F4" { SwitchToMode "Normal";}
             
     }
     normal { 
-        bind "Ctrl b" {SwitchToMode "Tmux";}
-    }
-    tmux { 
         // Pane and Tab creation and closure
-        bind "w" { NewPane "Right"; SwitchToMode "Normal";}
-        bind "W" { NewPane "Down"; SwitchToMode "Normal";}
-        bind "t" { NewTab; SwitchToMode "Normal";}
-        bind "q" { CloseFocus; SwitchToMode "Normal";}
-        bind "Q" { CloseTab; SwitchToMode "Normal";}
+        bind "Alt w" { NewPane "Right";}
+        bind "Alt W" { NewPane "Down";}
+        bind "Alt t" { NewTab;}
+        bind "Alt q" { CloseFocus;}
+        bind "Alt Q" { CloseTab;}
         // Float + Fullscreen
-        bind "f" {ToggleFloatingPanes; SwitchToMode "Normal";}
-        bind "F" { ToggleFocusFullscreen; SwitchToMode "Normal";}   
-        // Pane / Tab Switcheroo 
-        // bind "h" { MoveFocus "Left"; }
-        // bind "l" { MoveFocus "Right"; }
-        // bind "j" { MoveFocus "Down"; }
-        // bind "k" { MoveFocus "Up"; }
-        bind "p" { SwitchFocus; }
-        bind "H" { GoToPreviousTab; }
-        bind "J" { GoToNextTab; }              
+        bind "Alt /" {ToggleFloatingPanes;}
+        bind "Alt ?" { ToggleFocusFullscreen;}   
+        //Pane / Tab Switcheroo 
+        
+        bind "Alt =" { SwitchFocus; }
+        bind "Alt [" { GoToPreviousTab; }
+        bind "Alt ]" { GoToNextTab; }              
         //Session
-        bind "d" { Detach; }
-        // OPENING A HX for quick notes in the correct repo
+        bind "F5" { Detach; }
+    }
+    tmux {
+    
         bind "の" { Run "hx" "/home/nbertrand/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
         bind "じ" { Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";}    
-        //functions QOL , keybindings
-        bind "m" { ToggleMouseMode;}
-        bind "/" { Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl"; SwitchToMode "Normal";}
-        bind "?" { Run "bat" "/home/nbertrand/ZGMF-X20A/zsh/alias"; SwitchToMode "Normal";}
-        
+       
+        bind "/" { Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl";}       
     } 
     pane {
         bind "h" { Resize "Increase Left"; }
@@ -48,17 +41,18 @@ keybinds clear-defaults=true {
         bind "-" { Resize "Decrease"; }  
         //Move 
         bind "n" "Tab" { MovePane; }
-        bind "Alt h" { MovePane "Left"; }
-        bind "Alt j" { MovePane "Down"; }
-        bind "Alt k" { MovePane "Up"; }
-        bind "Alt l" { MovePane "Right"; }
+        bind "Ctrl h" { MovePane "Left"; }
+        bind "Ctrl j" { MovePane "Down"; }
+        bind "Ctrl k" { MovePane "Up"; }
+        bind "Ctrl l" { MovePane "Right"; }
         //customize
         bind "z" { TogglePaneFrames; SwitchToMode "Normal";}
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }  
         bind "s" { ToggleActiveSyncTab; SwitchToMode "Normal"; } /// WHAT DOES IT DO????yc
         bind "p" { SwitchToMode "RenamePane"; PaneNameInput 0;}
         bind "t" { SwitchToMode "RenameTab"; TabNameInput 0; }
-    } 
+        bind "m" { ToggleMouseMode;}
+     } 
     scroll {
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
@@ -101,7 +95,7 @@ keybinds clear-defaults=true {
         bind "Esc" {SwitchToMode "Normal";}
     }
     shared_except "locked" "entersearch" {
-        bind "Alt b" { SwitchToMode "Locked"; }
+        bind "F5" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
@@ -127,10 +121,10 @@ keybinds clear-defaults=true {
         bind "F1" { SwitchToMode "Scroll"; }
     }
     shared_except "tmux" "locked" {
-        bind "Ctrl b" { SwitchToMode "Tmux"; }
+        bind "F4" { SwitchToMode "Tmux"; }
     }
     shared_except "pane" "locked" {
-        bind "Ctrl r" { SwitchToMode "Pane";}
+        bind "F3" { SwitchToMode "Pane";}
     }
 }
 plugins {
