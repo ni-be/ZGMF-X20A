@@ -136,7 +136,7 @@ plugins {
 on_force_close "detach" // or quit when SIGTERM, SIGINT, SIGQUIT SIGHUP
 simplified_ui false // true
 default_shell "zsh"
-// pane_frames false // true
+pane_frames false // true
 theme "tokyo-night-storm"
 default_layout "futsu"
 default_mode "Normal"
