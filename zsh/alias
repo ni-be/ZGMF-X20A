@@ -27,7 +27,7 @@ alias ji="jisho-cli"
 }
 
 alias う="gitui"
-
+alias え="tectonic *.tex"
 
 #### EXA 
 alias ll='exa -l --icons --no-user --git'
