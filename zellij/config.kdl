@@ -136,11 +136,11 @@ plugins {
 on_force_close "detach" // or quit when SIGTERM, SIGINT, SIGQUIT SIGHUP
 simplified_ui false // true
 default_shell "zsh"
-pane_frames false // true
-theme "tokyo-night-storm"
+pane_frames true // true
+theme "kanagawa"
 default_layout "futsu"
 default_mode "Normal"
-mouse_mode false // true (default)
+mouse_mode true // true (default)
 scroll_buffer_size 10000
 // copy_command "xclip -selection clipboard" // x11
 //copy_command "wl-copy"                    // wayland
