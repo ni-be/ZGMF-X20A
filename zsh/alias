@@ -2,7 +2,8 @@
 ##### ALIAS     ###########
 ## making life easier #####
 ###########################
-
+alias zh="hx ~/ZGMF-X20A/zsh/alias"
+alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
 alias 字="jisho-cli"
 alias ji="jisho-cli"
@@ -40,11 +41,18 @@ alias la='exa --all'
 #### VS CODE 
 alias kot="code --"
 
+
+################################
+### CLINGO ######
+####################
+alias meta="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=3 0"
+
 ###########################
 ##### ZELLIJ ##############
 ###########################
 
 # FUZZY SEARCHES USING SKIM
+alias zj="zellij"
 
 alias ア="fx ~/SHOSAI/hiyori"
 #alias オ="
