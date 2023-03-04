@@ -10,14 +10,14 @@ layout {
 	tab name="main" {
 		pane name="tests" cwd="tests"
 	}
-	tab name="META" split_direction="horizontal"{
+	tab name="META" split_direction="vertical"{
 		pane size="70%" name="mod-meta" cwd="meta" 
 		pane size="30%" name="MetaMain" cwd="meta" edit="meta-telingo.lp"
 	}
 	tab name="gitui" {
 		pane command="gitui"
 	}
-	tab name"WiSe {	
+	tab name="WiSe" {	
 		pane name="metaWiSe" cwd="/home/nbertrand/ASP/telingo-wise22-23-team0/tests/niko"
 	}	
 	tab name="Resources" split_direction="horizontal" {
