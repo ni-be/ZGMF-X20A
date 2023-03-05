@@ -45,7 +45,18 @@ alias kot="code --"
 ################################
 ### CLINGO ######
 ####################
-alias meta="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=3 0"
+
+alias meta1="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=1 0"
+
+alias meta2="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=2 0"
+
+alias meta3="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=3 0"
+
+alias meta4="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=4 0"
+
+alias meta5="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=5 0"
+
+alias meta6="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=6 0"
 
 ###########################
 ##### ZELLIJ ##############
