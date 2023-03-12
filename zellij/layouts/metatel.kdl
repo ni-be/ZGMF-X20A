@@ -7,20 +7,17 @@ layout {
     }
 	// Gloab working directory
 	cwd "/home/nbertrand/ASP/temp_logic-python"
-	tab name="main" {
-		pane name="tests" cwd="tests"
+	
+	tab name="meta" {
+		pane name="meta" cwd="/home/nbertrand/ASP/temp_logic-python/meta-asprilo"
 	}
-	tab name="META" split_direction="vertical"{
-		pane size="70%" name="mod-meta" cwd="meta" 
-		pane size="30%" name="MetaMain" cwd="meta" edit="meta-telingo.lp"
+	tab name="furu" {
+		pane name="mod-meta" cwd="/home/nbertrand/ASP/OLD-ASP_moveToLibrary/nowakski" 
 	}
 	tab name="gitui" {
 		pane command="gitui"
 	}
-	tab name="WiSe" {	
-		pane name="metaWiSe" cwd="/home/nbertrand/ASP/telingo-wise22-23-team0/tests/niko"
+	tab name="tests" {
+		pane name="tests" cwd="/home/nbertrand/ASP/temp_logic-python/meta"
 	}	
-	tab name="Resources" split_direction="horizontal" {
-		pane name="resources" cwd="/home/nbertrand/ASP/telingo-wise22-23-team0/resources/tests"
-	}
 }
