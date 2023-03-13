@@ -1,4 +1,4 @@
-source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 CASE_SENSITIVE="true"
 
@@ -28,7 +28,7 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 
@@ -52,7 +52,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /home/nbertrand/.config/broot/launcher/bash/br
+source /home/nibe/.config/broot/launcher/bash/br
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

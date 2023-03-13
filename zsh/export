@@ -4,22 +4,22 @@
 ####################################################
 export LANG=en_US.UTF-8
 
-export PNPM_HOME="/home/nbertrand/.local/share/pnpm"
+export PNPM_HOME="/home/nibe/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
-export PATH=/home/nbertrand/.nimble/bin:$PATH
-export PATH=/home/nbertrand/.cargo/bin:$PATH
+export PATH=/home/nibe/.nimble/bin:$PATH
+export PATH=/home/nibe/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
 
-export PATH=/home/nbertrand/LSP/asp-language-server/target/debug:$PATH
+export PATH=/home/nibe/LSP/asp-language-server/target/debug:$PATH
 
 export PATH=~/go/bin/:$PATH
-export GOPATH=/home/nbertrand/go:$GOPATH
+export GOPATH=/home/nibe/go:$GOPATH
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
 
-export BARTIB_FILE="/home/nbertrand/SHOSAI/jinsei/time.md"
-export TODO_FILE="/home/nbertrand/SHOSAI/jinsei/todo/todo.txt"
-export DONE_FILE="/home/nbertrand/SHOSAI/jinsei/todo/done.txt"
+export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
+export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
+export DONE_FILE="/home/nibe/SHOSAI/jinsei/todo/done.txt"
