@@ -1,6 +1,6 @@
 layout {
 	
-    cwd "/home/nbertrand/ASP/thesis-prep"
+    cwd "/home/nibe/asp/niko_thesis"
 	default_tab_template {
         children
         pane size=2 borderless=true {
@@ -13,8 +13,8 @@ layout {
 	
     }
 	tab name="FILES" split_direction="vertical" {
-			pane size="50%" name="残酷の" command="broot"
-			pane size="50%" name="ひより" cwd="/home/nbertrand/SHOSAI/hiyori" command="broot"
+			pane size="50%" name="残酷の" 
+			pane size="50%" name="ひより" cwd="/home/nibe/SHOSAI/hiyori" 
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"

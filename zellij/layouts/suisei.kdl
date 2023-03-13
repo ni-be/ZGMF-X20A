@@ -6,14 +6,14 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nbertrand/exercism"
+	cwd "/home/nibe/code/exercism"
 	tab name="Library" split_direction="vertical" {
 	
-        pane size="50%" name="main" cwd="/home/nbertrand/exercism" command="broot"{
+        pane size="50%" name="main"{
 			
 		}
 		pane size="50%" split_direction="horizontal" {
-			pane name="readme" command="broot" size="70%"
+			pane name="readme" size="70%"
 			pane name="tests" size="30%"
 		}
 	}

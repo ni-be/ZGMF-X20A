@@ -6,18 +6,18 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nbertrand/ASP/temp_logic-python"
+	cwd "/home/nibe/asp/temp_logic-python"
 	
 	tab name="meta" {
-		pane name="meta" cwd="/home/nbertrand/ASP/temp_logic-python/meta-asprilo"
+		pane name="meta" cwd="/home/nibe/asp/temp_logic-python/meta-asprilo"
 	}
 	tab name="furu" {
-		pane name="mod-meta" cwd="/home/nbertrand/ASP/OLD-ASP_moveToLibrary/nowakski" 
+		pane name="mod-meta" cwd="/home/nibe/asp/OLD-ASP_moveToLibrary/nowakski" 
 	}
 	tab name="gitui" {
 		pane command="gitui"
 	}
 	tab name="tests" {
-		pane name="tests" cwd="/home/nbertrand/ASP/temp_logic-python/meta"
+		pane name="tests" cwd="/home/nibe/asp/temp_logic-python/meta"
 	}	
 }
