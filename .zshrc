@@ -1,4 +1,5 @@
 source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+conda config --set auto_activate_base False
 
 CASE_SENSITIVE="true"
 
