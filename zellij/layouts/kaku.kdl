@@ -10,7 +10,7 @@ layout {
 	// Gloab working directory
 	//cwd "/home/nbertrand/SHOSAI/kaku"
 	tab name="MAIN" split_direction="vertical" {
-	    pane name="書く" command="broot"
+	    pane name="書く"
 			
 	
     }
@@ -19,7 +19,7 @@ layout {
 		}
 	}
 	tab name="FILES"{
-		pane name="ファイル" command="broot"
+		pane name="ファイル" 
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"
