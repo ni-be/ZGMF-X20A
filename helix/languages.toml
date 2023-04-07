@@ -75,8 +75,6 @@ indent = { tab-width = 2, unit = "  " }
 name = "toml"
 source = { git = "https://github.com/ikatyang/tree-sitter-toml", rev = "7cff70bbcbbc62001b465603ca1ea88edd668704" }
 
-
-
 [[language]]
 name = "json"
 scope = "source.json"
@@ -545,18 +543,18 @@ language-server = { command = "swipl", args = [
     "-g", "lsp_server:main",
     "-t", "halt", "--", "stdio"] }
 
-[[language]]
-name = "tsq"
-scope = "source.tsq"
-file-types = ["scm"]
-roots = []
-comment-token = ";"
-injection-regex = "tsq"
-indent = { tab-width = 2, unit = "  " }
+# [[language]]
+# name = "tsq"
+# scope = "source.tsq"
+# file-types = ["scm"]
+# roots = []
+# comment-token = ";"
+# injection-regex = "tsq"
+# indent = { tab-width = 2, unit = "  " }
 
-[[grammar]]
-name = "tsq"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-tsq", rev = "48b5e9f82ae0a4727201626f33a17f69f8e0ff86" }
+# [[grammar]]
+# name = "tsq"
+# source = { git = "https://github.com/the-mikedavis/tree-sitter-tsq", rev = "48b5e9f82ae0a4727201626f33a17f69f8e0ff86" }
 
 [[language]]
 name = "cmake"
@@ -672,19 +670,19 @@ language-server = { command = "docker-langserver", args = ["--stdio"] }
 name = "dockerfile"
 source = { git = "https://github.com/camdencheek/tree-sitter-dockerfile", rev = "7af32bc04a66ab196f5b9f92ac471f29372ae2ce" }
 
-[[language]]
-name = "git-commit"
-scope = "git.commitmsg"
-roots = []
-file-types = ["COMMIT_EDITMSG"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-rulers = [50, 72]
-max-line-length = 72
+# [[language]]
+# name = "git-commit"
+# scope = "git.commitmsg"
+# roots = []
+# file-types = ["COMMIT_EDITMSG"]
+# comment-token = "#"
+# indent = { tab-width = 2, unit = "  " }
+# rulers = [50, 72]
+# max-line-length = 72
 
-[[grammar]]
-name = "git-commit"
-source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev = "318dd72abfaa7b8044c1d1fbeabcd06deaaf038f" }
+# [[grammar]]
+# name = "git-commit"
+# source = { git = "https://github.com/the-mikedavis/tree-sitter-git-commit", rev = "318dd72abfaa7b8044c1d1fbeabcd06deaaf038f" }
 
 [[language]]
 name = "diff"
