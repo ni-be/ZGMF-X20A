@@ -1,6 +1,4 @@
-source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-conda config --set auto_activate_base False
-
+source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 CASE_SENSITIVE="true"
 
 zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
@@ -29,8 +27,6 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
-#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
@@ -53,21 +49,3 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /home/nibe/.config/broot/launcher/bash/br
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
-        . "/usr/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

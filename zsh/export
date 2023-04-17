@@ -4,16 +4,11 @@
 ####################################################
 export LANG=en_US.UTF-8
 
-export PNPM_HOME="/home/nibe/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 export PATH=~/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=/home/nibe/.nimble/bin:$PATH
 export PATH=/home/nibe/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
-
-export PATH=/home/nibe/LSP/asp-language-server/target/debug:$PATH
 
 # export PATH=~/go/bin/:$PATH
 # export GOPATH=/home/nibe/go:$GOPATH
