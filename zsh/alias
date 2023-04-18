@@ -5,11 +5,8 @@
 alias zh="hx ~/ZGMF-X20A/zsh/alias"
 alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
-alias 字="jisho-cli"
-alias ji="jisho-cli"
 
 #### GIT 
-
 
 あ() {
     eval $(ssh-agent -s)
@@ -28,6 +25,9 @@ alias ji="jisho-cli"
 }
 
 alias う="gitui"
+
+
+#### LATEX ###
 alias え="tectonic *.tex"
 
 #### EXA 
@@ -37,9 +37,6 @@ alias l2='exa --tree --level 2 --icons --git'
 alias l3='exa --tree --level 3 --icons --git'
 alias ls='exa'
 alias la='exa --all'
-
-#### VS CODE 
-alias kot="code --"
 
 
 ################################
@@ -102,12 +99,4 @@ alias の="zellij --session ノエル --layout noel"
 # TTYD Terminal in browser
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
-
-###########################
-## ssh login
-###########################
-あ() {
-    eval $(ssh-agent -s)
-    ssh-add ~/.ssh/ghdev
-}
 

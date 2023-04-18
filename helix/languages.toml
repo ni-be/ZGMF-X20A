@@ -5,7 +5,7 @@ file-types = ["lp"]
 comment-token = "%"
 roots = []
 indent = { tab-width = 2, unit = "  "}
-language-server = { command = "/home/nibe/GIT/asp-language-server", args = ["--stdio"]}
+language-server = { command = "asp-language-server", args = ["--stdio"]}
 
 [[language]]
 name = "rust"

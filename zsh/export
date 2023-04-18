@@ -10,8 +10,8 @@ export PATH=/home/nibe/.nimble/bin:$PATH
 export PATH=/home/nibe/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
 
-#export PATH=~/go/bin/:$PATH
-#export GOPATH=/home/nibe/go:$GOPATH
+export PATH=~/go/bin/:$PATH
+export GOPATH=/home/nibe/go:$GOPATH
 #export GOROOT=$HOME/go
 #export PATH=$PATH:$GOROOT/bin
 
