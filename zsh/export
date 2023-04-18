@@ -10,10 +10,12 @@ export PATH=/home/nibe/.nimble/bin:$PATH
 export PATH=/home/nibe/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
 
-# export PATH=~/go/bin/:$PATH
-# export GOPATH=/home/nibe/go:$GOPATH
-# export GOROOT=$HOME/go
-# export PATH=$PATH:$GOROOT/bin
+#export PATH=~/go/bin/:$PATH
+#export GOPATH=/home/nibe/go:$GOPATH
+#export GOROOT=$HOME/go
+#export PATH=$PATH:$GOROOT/bin
+
+ export PATH=/home/nibe/.nimble/bin:$PATH
 
 export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
 export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
