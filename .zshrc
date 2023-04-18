@@ -1,4 +1,5 @@
 source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#eval "$(pyenv virtualenv-init -)"
 CASE_SENSITIVE="true"
 
 zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
