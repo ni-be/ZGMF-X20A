@@ -98,8 +98,10 @@ alias 人生="zellij --session 人生 --layout jinsei"
 ### theArchive
 alias の="zellij --session ノエル --layout noel"
 
-##### ETC 
+### RX-78-2
+alias が="zellij --session RX-78-2 --layout rx782"
 
+##### ETC 
 # TTYD Terminal in browser
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"

@@ -5,11 +5,15 @@ layout {
             plugin location="zellij:compact-bar"
         }
     }
-	tab name="ANSIBLE"{
-		
+	cwd "/home/nibe/RX-78-2"
+	tab name="ANSIBLE" split_direction="vertical"{
+		pane
+		pane 
 	}
 	tab name="SCRIPTING"{
+		pane
 		
 	}
 	tab name="TESTS"
+		pane
 }
