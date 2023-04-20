@@ -10,7 +10,7 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
 
-plugins=(git ssh-agent docker zsh-autosuggestions)
+plugins=(git ssh-agent zsh-autosuggestions)
 
 export EDITOR='hx'
 # Compilation flags
