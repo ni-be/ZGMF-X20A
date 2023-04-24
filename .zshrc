@@ -1,4 +1,5 @@
 source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
 #eval "$(pyenv virtualenv-init -)"
 CASE_SENSITIVE="true"
 
@@ -10,8 +11,19 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
 
-plugins=(git ssh-agent zsh-autosuggestions)
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# preview directory's content with exa when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+# switch group using `,` and `.`
+zstyle ':fzf-tab:*' switch-group ',' '.'
 
+plugins=(git ssh-agent fzf fzf-tab zsh-autosuggestions)
+#plugins=(fzf-tab)
 export EDITOR='hx'
 # Compilation flags
 #export ARCHFLAGS="-arch x86_64"
