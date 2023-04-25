@@ -1,6 +1,8 @@
 source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
+#source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
 #eval "$(pyenv virtualenv-init -)"
+
+conda config --set auto_activate_base false
 CASE_SENSITIVE="true"
 
 zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
@@ -22,7 +24,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-plugins=(git ssh-agent fzf fzf-tab zsh-autosuggestions)
+
+#plugins=(git ssh-agent fzf fzf-tab zsh-autosuggestions)
+plugins=(git ssh-agent zsh-autocomplete zsh-autosuggestions)
 #plugins=(fzf-tab)
 export EDITOR='hx'
 # Compilation flags
@@ -62,3 +66,20 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# source ~/Downloads/Sen2Cor-2.11.00-Linux64/L2A_Bashrc
