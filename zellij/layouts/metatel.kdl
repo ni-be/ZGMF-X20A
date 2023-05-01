@@ -6,18 +6,18 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/ASP/temp_logic-python"
+	cwd "/home/nibe/ASP/telingo-wise22-23-team0"
 	
 	tab name="meta" {
-		pane name="meta" cwd="/home/nibe/ASP/temp_logic-python/meta-asprilo"
+		pane name="meta" cwd="/home/nibe/ASP/telingo-wise22-23-team0/asprilo"
 	}
-	tab name="data" {
+	tab name="refs" {
 		pane name="data" cwd="/home/nibe/ASP/temp_logic-python"
 	}	
 	tab name="gitui" {
 		pane command="gitui"
 	}
 	tab name="tests" {
-		pane name="tests" cwd="/home/nibe/ASP/temp_logic-python/meta"
+		pane name="tests" cwd="/home/nibe/ASP/telingo-wise22-23-team0/tests"
 	}	
 }
