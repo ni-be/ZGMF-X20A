@@ -1,5 +1,6 @@
 source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-#source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
+source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
+
 #eval "$(pyenv virtualenv-init -)"
 
 conda config --set auto_activate_base false
@@ -25,8 +26,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
 
-#plugins=(git ssh-agent fzf fzf-tab zsh-autosuggestions)
-plugins=(git ssh-agent zsh-autocomplete zsh-autosuggestions)
+plugins=(git ssh-agent fzf fzf-tab)
+#plugins=(git ssh-agent zsh-autocomplete zsh-autosuggestions)
 #plugins=(fzf-tab)
 export EDITOR='hx'
 # Compilation flags
