@@ -7,6 +7,9 @@ alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
 
 #### GIT 
+gitup='ssh-add ~/.ssh/gitup'
+gic='git commit -m'
+gip='git push'
 
 あ() {
     eval $(ssh-agent -s)
