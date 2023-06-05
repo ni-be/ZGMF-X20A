@@ -39,7 +39,7 @@ source ~/.config/zsh/foot
 
 _ZO_EXCLUDE_DIRS=""
 _ZO_RESOLVE_SYMLINKS=1
-SAVEHIST=10000  # Save most-recent 1000 lines
+SAVEHIST=1000  # Save most-recent 1000 lines
 HISTFILE=~/.zsh_history
 
 
