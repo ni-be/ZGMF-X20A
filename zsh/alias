@@ -50,27 +50,13 @@ alias la='exa --all'
 ### CLINGO ######
 ####################
 
-alias meta1="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=1 0"
-
-alias meta2="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=2 0"
-
-alias meta3="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=3 0"
-
-alias meta4="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=4 0"
-
-alias meta5="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=5 0"
-
-alias meta6="clingo - ~/ASP/temp_logic-python/meta/meta-telingo.lp -c horizon=6 0"
-
 ###########################
 ##### ZELLIJ ##############
 ###########################
-
-# FUZZY SEARCHES USING SKIM
 alias zj="zellij"
 
-alias ア="fx ~/SHOSAI/hiyori"
-#alias オ="
+#ア
+#オ
 #エ
 #オ
 
@@ -83,7 +69,8 @@ alias ね="zellij --layout futsu"
 
 #####################
 # Sessions/Workspaces
-# MSC THESIS 
+
+# msc project 
 alias 残酷="zellij --session 地獄 --layout zankoku"
 
 # LATEX repo -> nikolasbertrand/kaku 
@@ -109,3 +96,5 @@ alias が="zellij --session RX-78-2 --layout rx782"
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
 
+alias じ="jisho-cli"
+alias ji="jisho-cli"
