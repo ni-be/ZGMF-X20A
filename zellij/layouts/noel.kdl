@@ -6,10 +6,10 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/code/theArchive"
+	cwd "/home/nibe/PROJECTS/raindeer"
 	tab name="第1" split_direction="vertical" {
 	
-        pane size="50%" name="main" cwd="/home/nibe/code/theArchive" command="broot"{
+        pane size="50%" name="main" {
 			
 		}
 		pane size="50%" split_direction="horizontal" {

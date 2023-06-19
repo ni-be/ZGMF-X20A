@@ -14,17 +14,16 @@ export PATH=~/go/bin/:$PATH
 export GOPATH=/home/nibe/go:$GOPATH
 #export GOROOT=$HOME/go
 #export PATH=$PATH:$GOROOT/bin
-export PATH=/home/nibe/Downloads/Sen2Cor-02.11.00-Linux64/bin:$PATH
+
 export PATH=/home/nibe/.nimble/bin:$PATH
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH=/home/nibe/.pyenv/versions/3.9.15/bin:$PATH
-
 export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
 export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
 export DONE_FILE="/home/nibe/SHOSAI/jinsei/todo/done.txt"
 
-
+export VISUAL='hx'
+export EDITOR='hx'
