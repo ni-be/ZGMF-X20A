@@ -57,7 +57,7 @@ alias la='exa --all'
 ###########################
 alias zj="zellij"
 
-alias ア="conda activate ASP" 
+alias あい="conda activate ASP" 
 #オ
 #エ
 #オ
