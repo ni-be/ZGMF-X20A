@@ -104,6 +104,7 @@ require('lazy').setup({
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
+     
     },
   },
 
@@ -128,6 +129,7 @@ require('lazy').setup({
     priority = 1000,
     opts = {},
   },
+  
   {
     -- Adds git releated signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -147,16 +149,8 @@ require('lazy').setup({
       end,
     },
   },
-
-  {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
-
+  
+ 
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -170,8 +164,7 @@ require('lazy').setup({
       },
     },
   },
-
-  {
+   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
@@ -315,7 +308,7 @@ vim.keymap.set('n', '<leader>/', function()
 end, { desc = '[/] Fuzzily search in current buffer' })
 
 vim.keymap.set('n', '<leader>gf', require('telescope.builtin').git_files, { desc = 'Search [G]it [F]iles' })
-vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>f', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
