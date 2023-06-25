@@ -66,7 +66,7 @@ alias あい="conda activate ASP"
 alias zrf="zellij run -f --"
 
 ##### Choose active session ### TODO CHARM - make it look nicer 
-alias ねね=". ~/.config/zellij/script/current-session.sh"
+alias ねね="zellij-runner"
 alias ね="zellij --layout futsu"
 
 #####################
@@ -87,7 +87,7 @@ alias め="zellij --session メターテリンゴ --layout metatel"
 ### Note Taking
 alias 人生="zellij --session 人生 --layout jinsei"
 
-### theArchive
+### RSE
 alias の="zellij --session ノエル --layout noel"
 
 ### RX-78-2

@@ -13,7 +13,7 @@ layout {
 			
 		}
 		pane size="50%" split_direction="horizontal" {
-			pane name="第2" command="broot" size="70%"
+			pane name="第2" 
 			pane name="振舞い試験" size="30%"
 		}
 	}

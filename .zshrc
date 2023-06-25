@@ -84,3 +84,11 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # source ~/Downloads/Sen2Cor-2.11.00-Linux64/L2A_Bashrc
+
+# pnpm
+export PNPM_HOME="/home/nibe/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

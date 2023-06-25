@@ -17,13 +17,21 @@ export GOPATH=/home/nibe/go:$GOPATH
 
 export PATH=/home/nibe/.nimble/bin:$PATH
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
 export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
 export DONE_FILE="/home/nibe/SHOSAI/jinsei/todo/done.txt"
 
-export VISUAL='hx'
-export EDITOR='hx'
+export ZELLIJ_RUNNER_LAYOUTS_DIR=.config/zellij/layouts
+
+# directory with the projects, relative to the HOME dir
+#ZELLIJ_RUNNER_ROOT_DIR=
+
+# switcher already respects gitignore, but it's still useful in case there's no git
+export ZELLIJ_RUNNER_IGNORE_DIRS=node_modules,target
+# traverse dirs 3 level max from ZELLIJ_RUNNER_ROOT_DIR
+export ZELLIJ_RUNNER_MAX_DIRS_DEPTH=3
+source /home/nibe/chatgpt_api
+#ZELLIJ_RUNNER_BANNERS_DIR=.config/zellij/banners
+export VISUAL='nvim'
+export EDITOR='nvim'
