@@ -1,9 +1,9 @@
 
-theme = "kanagawa"
+theme = "catpuccin_latte"
 
 [editor]
 line-number = "relative"
-mouse = false
+mouse = true
 middle-click-paste = true
 auto-completion = true
 

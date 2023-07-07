@@ -23,10 +23,17 @@ keybinds clear-defaults=true {
     }
     tmux {
     
-        bind "の" { Run "hx" "/home/nbertrand/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
-        bind "じ" { Run "fx" "/home/nbertrand/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";}    
+        bind "の" { Run "nvim" "/home/nibe/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
+        bind "じ" { Run "fx" "/home/nibe/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";}    
        
-        bind "/" { Run "bat" "/home/nbertrand/ZGMF-X20A/zellij/config.kdl";}       
+        bind "/" { Run "bat" "/home/nibe/ZGMF-X20A/zellij/config.kdl";} 
+       // shared_except "locked" {
+        bind "も" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle" {
+            floating true
+        }; SwitchToMode "Normal"; } // }
+        
+        bind "F" { Run "zellij" "run" "--close-on-exit" "--" "/home/nibe/ZGMF-X20A/scripts/rfv";}
     } 
     pane {
         bind "h" { Resize "Increase Left"; }
@@ -137,20 +144,20 @@ on_force_close "detach" // or quit when SIGTERM, SIGINT, SIGQUIT SIGHUP
 simplified_ui false // true
 default_shell "zsh"
 pane_frames true // true
-theme "tokyo-night-storm"
+theme "~/.config/zellij/themes/tokyo-night-storm"
 default_layout "futsu"
 default_mode "Normal"
 mouse_mode true // true (default)
 scroll_buffer_size 10000
 // copy_command "xclip -selection clipboard" // x11
-//copy_command "wl-copy"                    // wayland
+// copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
-//copy_clipboard "primary" // system (default)
+// copy_clipboard "primary" // system (default)
 // copy_on_select false // true
 // scrollback_editor "/usr/bin/vim" //default : $EDITOR or $VISUAL
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
 // mirror_session true // default false
-// layout_dir "~/.config/zellij/layout"
-theme_dir "~/.config/zellij/themes"
+// layout_dir "~/.config/zellij/layout/"
+//theme_dir "~/.config/zellij/themes/"

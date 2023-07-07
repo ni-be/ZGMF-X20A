@@ -6,6 +6,9 @@ alias zh="hx ~/ZGMF-X20A/zsh/alias"
 alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
 
+##### alias FZF
+alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3'"
+alias fzd="cd ~ && cd \$(find * -type d | fzf)"
 #### GIT 
 gitup='ssh-add ~/.ssh/gitup'
 gic='git commit -m'
@@ -29,6 +32,7 @@ gip='git push'
 
 alias う="gitui"
 
+alias さ="/home/nibe/ZGMF-X20A/scripts/rfv"
 
 #### LATEX ###
 alias え="tectonic *.tex"
@@ -41,26 +45,16 @@ alias l3='exa --tree --level 3 --icons --git'
 alias ls='exa'
 alias la='exa --all'
 
-#################################################################################
-################ PYTHON #########################################################
-#################################################################################
-
-
-################################
-### CLINGO ######
-####################
-
-
+###########################
+#### CONDA ###############
+##########################
+alias あい="conda activate ASP" 
 
 ###########################
 ##### ZELLIJ ##############
 ###########################
 alias zj="zellij"
 
-alias あい="conda activate ASP" 
-#オ
-#エ
-#オ
 
 #run in floating window
 alias zrf="zellij run -f --"
@@ -97,6 +91,6 @@ alias が="zellij --session RX-78-2 --layout rx782"
 # TTYD Terminal in browser
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
-
+##### Jisho.org
 alias じ="jisho-cli"
 alias ji="jisho-cli"
