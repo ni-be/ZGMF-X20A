@@ -1,12 +1,9 @@
 source ~/GIT/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source ~/GIT/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/GIT/fzf-tab/fzf-tab.plugin.zsh
-
-#eval "$(pyenv virtualenv-init -)"
-
 conda config --set auto_activate_base false
-CASE_SENSITIVE="true"
 
-zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
+#zstyle ':omz:update' mode auto  zstyle ':omz:update' frequency 13
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -14,22 +11,10 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy/mm/dd"
 
-# disable sort when completing `git checkout`
-zstyle ':completion:*:git-checkout:*' sort false
-# set descriptions format to enable group support
-zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# preview directory's content with exa when completing cd
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
-# switch group using `,` and `.`
-zstyle ':fzf-tab:*' switch-group ',' '.'
-
-
-plugins=(git ssh-agent fzf fzf-tab)
+plugins=(git ssh-agent fzf-tab)
 #plugins=(git ssh-agent zsh-autocomplete zsh-autosuggestions)
 #plugins=(fzf-tab)
-export EDITOR='hx'
+
 # Compilation flags
 #export ARCHFLAGS="-arch x86_64"
 source ~/.config/zsh/shell-integration
@@ -45,7 +30,6 @@ HISTFILE=~/.zsh_history
 
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
-
 
 # Preview file content using bat (https://github.com/sharkdp/bat)
 export FZF_CTRL_T_OPTS="
@@ -83,12 +67,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# source ~/Downloads/Sen2Cor-2.11.00-Linux64/L2A_Bashrc
-
-# pnpm
-export PNPM_HOME="/home/nibe/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# # pnpm
+# export PNPM_HOME="/home/nibe/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 # pnpm end
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit

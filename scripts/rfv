@@ -3,13 +3,27 @@
 # 1. Search for text in files using Ripgrep
 # 2. Interactively narrow down the list using fzf
 # 3. Open the file in Vim
-rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-  fzf --ansi \
-      --color "hl:-1:underline,hl+:-1:underline:reverse" \
-      --delimiter : \
-      --preview 'bat --color=always {1} --highlight-line {2}' \
-      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
-      --bind 'CTRL-n:become(nvim {1} +{2})'\
-      --bind 'CTRL-f:become(zellij edit --floating {1} --line-number +{2})'\
-      --bind 'CTRL-p:become(zellij edit {1} --line-number +{2})'
+# 1. Search for text in files using Ripgrep
+# 2. Interactively narrow down the list using fzf
+# 3. Open the file in Vim
+# rg --color=always --line-number --no-heading --smart-case "${*:-}" |
+#   fzf --ansi \
+#       --color "hl:-1:underline,hl+:-1:underline:reverse" \
+#       --delimiter : \
+#       --preview 'bat --color=always {1} --highlight-line {2}' \
+#       --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
+#       --bind 'enter:become(nvim {1} +{2})'      
+      #--bind 'CTRL-f:become(zellij edit --floating {1} --line-number +{2})'\
+      #--bind 'CTRL-p:become(zellij edit {1} --line-number +{2})'
 
+RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+INITIAL_QUERY="${*:-}"
+: | fzf --ansi --disabled --query "$INITIAL_QUERY" \
+    --bind "start:reload:$RG_PREFIX {q}" \
+    --bind "change:reload:sleep 0.1; $RG_PREFIX {q} || true" \
+    --delimiter : \
+    --preview 'bat --color=always {1} --highlight-line {2}' \
+    --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
+    --bind 'enter:become(hx {1} +{2})'\
+    --bind 'CTRL-k:become(zellij edit --floating {1} --line-number +{2})'\
+    --bind 'CTRL-l:become(zellij edit {1} --line-number +{2})'

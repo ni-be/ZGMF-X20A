@@ -6,7 +6,9 @@ line-number = "relative"
 mouse = true
 middle-click-paste = true
 auto-completion = true
-
+auto-format  = true
+completion-replace = true
+text-width = 140
 
 [editor.cursor-shape]
 insert = "bar"
@@ -15,15 +17,48 @@ select = "underline"
 
 [editor.lsp] 
 display-messages = true
+display-inlay-hints = true
+snippets = true
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+separator = "｜"
+left = ["mode", "spinner", "separator", "spacer", "selections", "primary-selection-length"]
+center = ["file-name", "file-modification-indicator"]
+right = ["version-control", "separator", "workspace-diagnostics", "separator", "diagnostics", "position", "total-line-numbers", "file-encoding", "file-line-ending", "file-type"]
+mode.normal = "普通"
+mode.insert = "入れる"
+mode.select = "選ぶ"
+
+[editor.indent-guides]
+render = true
+character = "⸽" 
+skip-levels = 1
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "spacer", "line-numbers", "spacer"]
+
+[editor.gutters.line-numbers]
+min-width = 2
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 0
+wrap-indicator = ""  # set wrap-indicator to "" to hide it
+wrap-at-text-width = true
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
@@ -32,3 +67,9 @@ esc = ["collapse_selection", "keep_primary_selection"]
 w = ":write"
 q = ":quit"
 W = ":wq"
+
+[keys.normal."`"]
+a = "code_action"
+
+[keys.normal."+"]
+g = ":run-shell-command gitui"

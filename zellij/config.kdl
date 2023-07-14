@@ -23,7 +23,7 @@ keybinds clear-defaults=true {
     }
     tmux {
     
-        bind "の" { Run "nvim" "/home/nibe/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
+        bind "の" { Run "hx" "/home/nibe/SHOSAI/jinsei" ; SwitchToMode "Normal"; }
         bind "じ" { Run "fx" "/home/nibe/SHOSAI/jinsei/pdf" ; SwitchToMode "Normal";}    
        
         bind "/" { Run "bat" "/home/nibe/ZGMF-X20A/zellij/config.kdl";} 

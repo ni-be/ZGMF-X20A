@@ -110,8 +110,9 @@ require('lazy').setup({
 
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
-  -- AI STUFF CHATGPT AND COPILOT maybe codium
-  {  "github/copilot.vim" },
+  -- AI STUFF CHATGPT AndT maybe codium
+ -- {  "github/copilot.vim" },
+    {"zbirenbaum/copilot.lua"}
    -- THEME
   { "folke/tokyonight.nvim",
     lazy = false,
