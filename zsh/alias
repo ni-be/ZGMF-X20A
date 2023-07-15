@@ -1,0 +1,95 @@
+####################################################
+##### ALIAS     ###################################
+## making life easier ############################
+##################################################
+alias zh="hx ~/ZGMF-X20A/zsh/alias"
+alias zb="bat ~/ZGMF-X20A/zsh/alias"
+alias peko="bartib"
+
+##### alias FZF
+alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3' --bind 'enter:become(hx {})' --bind 'CTRL-k:become(zellij edit --floating {})' --bind 'CTRL-l:become(zellij action new-pane -- hx {})'" 
+alias fzt="/home/nibe/ZGMF-X20A/scripts/rfv"
+alias fzd="cd ~ && cd \$(find * -type d | fzf)"
+#### GIT 
+alias gitup='ssh-add ~/.ssh/gitup'
+gic='git commit -m'
+gip='git push'
+
+
+ア() {
+    eval $(ssh-agent -s)
+    ssh-add ~/.ssh/ghdev
+}
+### Git update script... 
+い() {
+    git add --all
+    if [ "$1" != "" ] # or better, if [ -n "$1" ]
+    then
+        git commit -m "$1"
+    else
+        git commit -m update
+    fi
+    git push
+}
+
+alias う="gitui"
+
+#### LATEX ###
+alias え="tectonic *.tex"
+
+#### EXA 
+alias ll='exa -l --icons --no-user --git'
+alias l1='exa --tree --level 1 --icons --git'
+alias l2='exa --tree --level 2 --icons --git'
+alias l3='exa --tree --level 3 --icons --git'
+alias ls='exa'
+alias la='exa --all'
+
+###########################
+#### CONDA ###############
+##########################
+alias あい="conda activate ASP" 
+
+###########################
+##### ZELLIJ ##############
+###########################
+alias zj="zellij"
+
+#run in floating window
+alias zrf="zellij run -f --"
+
+##### Choose active session ### TODO CHARM - make it look nicer 
+alias あ="zellij-runner"
+alias a="zellij-runner"
+alias ねね="zellij --layout futsu"
+
+#####################
+# Sessions/Workspaces
+
+# msc project 
+alias 残酷="zellij --session 地獄 --layout zankoku"
+
+# LATEX repo -> nikolasbertrand/kaku 
+alias か="zellij --session 書く --layout kaku"
+
+#### Exercism
+alias す="zellij --session すいせい --layout suisei"
+
+#### Alias MetaTelingo Project
+alias め="zellij --session メターテリンゴ --layout metatel"
+
+### Note Taking
+alias 人生="zellij --session 人生 --layout jinsei"
+
+### RSE
+alias の="zellij --session ノエル --layout noel"
+
+### RX-78-2
+alias が="zellij --session RX-78-2 --layout rx782"
+
+##### ETC 
+# TTYD Terminal in browser
+alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+alias ttydk="ps -ef | rg ttyd"
+##### Jisho.org
+alias じ="jisho-cli"

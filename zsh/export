@@ -1,0 +1,37 @@
+####################################################
+### EXPORTS ########################################
+####################################################
+export LANG=en_US.UTF-8
+
+### PATHS 
+#==============
+export PATH=~/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=/home/nibe/.nimble/bin:$PATH
+export PATH=/home/nibe/.cargo/bin:$PATH
+export PATH=/var/lib/flatpak/exports/bin:$PATH
+
+export PATH=~/go/bin/:$PATH
+export GOPATH=/home/nibe/go:$GOPATH
+
+## QOL apps 
+#=============
+export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
+export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
+export DONE_FILE="/home/nibe/SHOSAI/jinsei/todo/done.txt"
+
+## ZELLIJ RUNNER
+#===================
+export ZELLIJ_RUNNER_LAYOUTS_DIR=.config/zellij/layouts
+# directory with the projects, relative to the HOME dir
+#ZELLIJ_RUNNER_ROOT_DIR=
+# switcher already respects gitignore, but it's still useful in case there's no git
+export ZELLIJ_RUNNER_IGNORE_DIRS=node_modules,target
+# traverse dirs 3 level max from ZELLIJ_RUNNER_ROOT_DIR
+export ZELLIJ_RUNNER_MAX_DIRS_DEPTH=0
+#ZELLIJ_RUNNER_BANNERS_DIR=.config/zellij/banners
+
+### EDITOR
+#==================
+export VISUAL='hx'
+export EDITOR='hx'
