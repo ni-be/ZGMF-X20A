@@ -12,10 +12,24 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Tokyo Night Moon'
-config.window_background_opacity = 0.95
-config.font_size = 10.0
+config.window_background_opacity = 0.96
+config.font_size = 10
+config.font = wezterm.font('HackGen35 Console NF', { weight = 'Regular' })
+config.window_padding = {
+  left = '0.1cell',
+  right = '0.1cell',
+  top = '0.1cell',
+  bottom = '0.1cell',
+}
 
 config.enable_tab_bar = false
-window_decorations = "Resize"
+--config.window_decorations = "NONE"
+config.window_padding = {
+  left = '0.7cell',
+  right = '0.2cell',
+  top = '0.2cell',
+  bottom = '0.3cell',
+}
+config.window_close_confirmation = 'NeverPrompt'
 -- and finally, return the configuration to wezterm
 return config
