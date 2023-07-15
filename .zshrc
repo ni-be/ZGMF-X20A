@@ -139,10 +139,10 @@ jit() {
     git push
 }
 
-alias う="gitui"
+alias jui="gitui"
 
 #### LATEX ###
-alias え="tectonic *.tex"
+alias ttex="tectonic *.tex"
 
 #### EXA 
 alias ll='exa -l --icons --no-user --git'
