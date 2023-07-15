@@ -128,7 +128,7 @@ gip='git push'
     ssh-add ~/.ssh/ghdev
 }
 ### Git update script... 
-い() {
+jit() {
     git add --all
     if [ "$1" != "" ] # or better, if [ -n "$1" ]
     then
