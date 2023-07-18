@@ -6,6 +6,7 @@ export LANG=en_US.UTF-8
 ### PATHS 
 #==============
 export PATH=~/bin:$PATH
+export PATH=~/GIT:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=/home/nibe/.nimble/bin:$PATH
 export PATH=/home/nibe/.cargo/bin:$PATH

@@ -5,7 +5,7 @@
 alias zh="hx ~/ZGMF-X20A/zsh/alias"
 alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
-
+alias gvid="bash ~/GIT/sixvid/sixvid"
 ##### alias FZF
 alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3' --bind 'enter:become(hx {})' --bind 'CTRL-k:become(zellij edit --floating {})' --bind 'CTRL-l:become(zellij action new-pane -- hx {})'" 
 alias fzt="/home/nibe/ZGMF-X20A/scripts/rfv"

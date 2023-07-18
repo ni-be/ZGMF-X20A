@@ -150,11 +150,11 @@ default_mode "Normal"
 mouse_mode true // true (default)
 scroll_buffer_size 10000
 // copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
-// copy_clipboard "primary" // system (default)
-// copy_on_select false // true
-// scrollback_editor "/usr/bin/vim" //default : $EDITOR or $VISUAL
+copy_clipboard "primary" // system (default)
+copy_on_select true // true
+scrollback_editor "/usr/bin/hx" //default : $EDITOR or $VISUAL
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)
