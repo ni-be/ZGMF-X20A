@@ -1,5 +1,3 @@
-
-
 ## IMPORTS -> EXPORT, ALIAS 
 source ~/ZGMF-X20A/zsh/alias
 source ~/ZGMF-X20A/zsh/export
@@ -20,3 +18,6 @@ HISTFILE=~/.zsh_history
 eval "$(zoxide init zsh --hook pwd)"
 eval "$(starship init zsh)"
 source ~/ZGMF-X20A/zsh/zinit_plugs
+
+# opam configuration
+[[ ! -r /home/nibe/.opam/opam-init/init.zsh ]] || source /home/nibe/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

@@ -6,10 +6,19 @@ alias zh="hx ~/ZGMF-X20A/zsh/alias"
 alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
 alias gvid="bash ~/GIT/sixvid/sixvid"
+
+
+## PYTHON virtualenv
+alias あい="source ~/PYVENV/残酷/bin/activate"
+alias ASP39="source ~/PYVENV/ASP39/bin/activate"
+alias boo="deactivate"
+
 ##### alias FZF
 alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3' --bind 'enter:become(hx {})' --bind 'CTRL-k:become(zellij edit --floating {})' --bind 'CTRL-l:become(zellij action new-pane -- hx {})'" 
 alias fzt="/home/nibe/ZGMF-X20A/scripts/rfv"
 alias fzd="cd ~ && cd \$(find * -type d | fzf)"
+
+
 #### GIT 
 alias gitup='ssh-add ~/.ssh/gitup'
 gic='git commit -m'
@@ -44,11 +53,6 @@ alias l2='exa --tree --level 2 --icons --git'
 alias l3='exa --tree --level 3 --icons --git'
 alias ls='exa'
 alias la='exa --all'
-
-###########################
-#### CONDA ###############
-##########################
-alias あい="conda activate ASP" 
 
 ###########################
 ##### ZELLIJ ##############

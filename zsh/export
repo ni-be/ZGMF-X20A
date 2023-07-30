@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 export PATH=~/bin:$PATH
 export PATH=~/GIT:$PATH
 export PATH=~/.local/bin:$PATH
-export PATH=/home/nibe/.nimble/bin:$PATH
+
 export PATH=/home/nibe/.cargo/bin:$PATH
 export PATH=/var/lib/flatpak/exports/bin:$PATH
 
