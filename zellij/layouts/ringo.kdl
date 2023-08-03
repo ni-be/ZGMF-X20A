@@ -6,13 +6,13 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/SHOSAI/jinsei"
-	tab name="NOTES" split_direction="vertical" {
-       	pane name="ノート" cwd="notes" command="hx"
-		
+	cwd "/home/nibe/SHOSAI/ringo"
+	tab name="ノート" split_direction="vertical" {
+       	pane name="今の" cwd="docs"
+		pane name"プリビュー"  cwd="docs"
     }
-	tab name="PDF" {
-		pane name="ファイル" cwd="/home/nibe/SHOSAI/hiyori" command="broot"
+	tab name="ファイル" {
+		pane name="dir" cwd="reading" command="broot"
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"

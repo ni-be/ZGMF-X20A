@@ -154,7 +154,7 @@ copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 copy_clipboard "primary" // system (default)
 copy_on_select true // true
-scrollback_editor "/usr/bin/hx" //default : $EDITOR or $VISUAL
+//scrollback_editor "/usr/bin/hx" //default : $EDITOR or $VISUAL
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
 // or should each user have their own cursor (false)

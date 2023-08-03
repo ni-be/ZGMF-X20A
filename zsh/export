@@ -17,9 +17,8 @@ export GOPATH=/home/nibe/go:$GOPATH
 
 ## QOL apps 
 #=============
-export BARTIB_FILE="/home/nibe/SHOSAI/jinsei/time.md"
-export TODO_FILE="/home/nibe/SHOSAI/jinsei/todo/todo.txt"
-export DONE_FILE="/home/nibe/SHOSAI/jinsei/todo/done.txt"
+export BARTIB_FILE="/home/nibe/SHOSAI/ringo/ぺこ.md"
+
 
 ## ZELLIJ RUNNER
 #===================

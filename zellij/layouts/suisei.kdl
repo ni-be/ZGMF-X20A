@@ -6,7 +6,7 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/code/exercism"
+	cwd "/home/nibe/PROJECTS/exercism"
 	tab name="Library" split_direction="vertical" {
 	
         pane size="50%" name="main"{

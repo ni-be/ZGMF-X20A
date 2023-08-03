@@ -83,10 +83,10 @@ alias す="zellij --session すいせい --layout suisei"
 alias め="zellij --session メターテリンゴ --layout metatel"
 
 ### Note Taking
-alias 人生="zellij --session 人生 --layout jinsei"
+alias ringo="zellij --session 人生 --layout ringo"
 
-### RSE
-alias の="zellij --session ノエル --layout noel"
+### 
+alias の="zellij --session ノエル --layout dev"
 
 ### RX-78-2
 alias が="zellij --session RX-78-2 --layout rx782"
@@ -96,4 +96,5 @@ alias が="zellij --session RX-78-2 --layout rx782"
 alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
 ##### Jisho.org
-alias じ="jisho-cli"
+alias じ="jisho"
+alias ji="jisho"

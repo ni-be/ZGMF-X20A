@@ -15,9 +15,14 @@ HISTFILE=~/.zsh_history
 
 
 # EVALS
-eval "$(zoxide init zsh --hook pwd)"
-eval "$(starship init zsh)"
+#eval "$(zoxide init zsh --hook pwd)"
+#eval "$(starship init zsh)"
 source ~/ZGMF-X20A/zsh/zinit_plugs
 
 # opam configuration
 [[ ! -r /home/nibe/.opam/opam-init/init.zsh ]] || source /home/nibe/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+autoload -Uz compinit
+compinit -i
+eval "$(zoxide init zsh )"
+eval "$(starship init zsh)"
