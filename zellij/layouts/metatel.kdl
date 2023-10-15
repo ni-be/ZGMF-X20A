@@ -9,7 +9,7 @@ layout {
 	cwd "/home/nibe/PROJECTS/telingo-wise22-23-team0"
 	
 	tab name="meta" {
-		pane name="meta" cwd="/home/nibe/PROJECTS/telingo-wise22-23-team0/asprilo"
+		pane name="meta" cwd="/home/nibe/PROJECTS/telingo-wise22-23-team0/meta_asprilo"
 	}
 	tab name="refs" {
 		pane name="data" cwd="/home/nibe/PROJECTS/temp_logic-python"

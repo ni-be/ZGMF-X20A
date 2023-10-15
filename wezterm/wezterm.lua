@@ -19,7 +19,7 @@ config.window_padding = {
   left = '0.1cell',
   right = '0.1cell',
   top = '0.1cell',
-  bottom = '0.1cell',
+  bottom = '0.01cell',
 }
 
 config.enable_tab_bar = false
@@ -28,7 +28,7 @@ config.window_padding = {
   left = '0.7cell',
   right = '0.2cell',
   top = '0.2cell',
-  bottom = '0.3cell',
+  bottom = '0.01cell',
 }
 config.window_close_confirmation = 'NeverPrompt'
 -- and finally, return the configuration to wezterm

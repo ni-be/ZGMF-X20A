@@ -7,6 +7,7 @@ alias zb="bat ~/ZGMF-X20A/zsh/alias"
 alias peko="bartib"
 alias gvid="bash ~/GIT/sixvid/sixvid"
 
+alias 2723="ddcutil -d 1 setvcp 10"
 
 ## PYTHON virtualenv
 alias あい="source ~/PYVENV/残酷/bin/activate"

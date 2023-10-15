@@ -1,6 +1,6 @@
 layout {
 	
-    cwd "/home/nibe/SHOSAI/ringo/書く"
+    cwd "/home/nibe/SHOSAI/ringo"
 	default_tab_template {
         children
         pane size=2 borderless=true {
@@ -14,8 +14,13 @@ layout {
 			
 	
     }
-	tab name="BIB" {
-		pane name="書斎" edit="archive.bib"{
+	tab name="Archive" {
+		pane name="書斎" edit="docs/writing/archive.bib"{
+		}
+	}
+
+	tab name="Blingo" {
+		pane name="blingo_書斎" edit="docs/writing/blingo.bib"{
 		}
 	}
 	tab name="FILES"{
