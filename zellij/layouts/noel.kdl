@@ -6,8 +6,8 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/PROJECTS/raindeer"
-	tab name="第1" split_direction="vertical" {
+	cwd "/home/nibe/PROJECTS/RSE-UP"
+	tab name="RSE-UP" split_direction="vertical" {
 	
         pane size="50%" name="main" {
 			
@@ -16,6 +16,11 @@ layout {
 			pane name="第2" 
 			pane name="振舞い試験" size="30%"
 		}
+	}
+	tab name="PY-RSE"{
+			pane name="第3"{
+				cwd "/home/nibe/PROJECTS/py-rse"
+			} 		
 	}
 	tab name="ジット" {
 		pane name="Git" command="gitui"

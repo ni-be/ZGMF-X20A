@@ -11,7 +11,6 @@ alias 2723="ddcutil -d 1 setvcp 10"
 
 ## PYTHON virtualenv
 alias あい="source ~/PYVENV/残酷/bin/activate"
-alias ASP39="source ~/PYVENV/ASP39/bin/activate"
 alias boo="deactivate"
 
 ##### alias FZF
@@ -87,7 +86,7 @@ alias め="zellij --session メターテリンゴ --layout metatel"
 alias ringo="zellij --session 人生 --layout ringo"
 
 ### 
-alias の="zellij --session ノエル --layout dev"
+alias の="zellij --session ノエル --layout noel"
 
 ### RX-78-2
 alias が="zellij --session RX-78-2 --layout rx782"

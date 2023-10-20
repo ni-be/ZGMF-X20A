@@ -28,10 +28,10 @@ keybinds clear-defaults=true {
        
         bind "/" { Run "bat" "/home/nibe/ZGMF-X20A/zellij/config.kdl";} 
        // shared_except "locked" {
-        bind "も" {
-        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle" {
-            floating true
-        }; SwitchToMode "Normal"; } // }
+    //    bind "も" {
+    //    LaunchOrFocusPlugin "file:~/.config/zellij/plugins/monocle" {
+    //        floating true
+    //    }; SwitchToMode "Normal"; } // }
         
         bind "F" { Run "zellij" "run" "--close-on-exit" "--" "/home/nibe/ZGMF-X20A/scripts/rfv";}
     } 
