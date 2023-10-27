@@ -4,8 +4,8 @@ scope = "scope.clingo"
 file-types = ["lp"]
 comment-token = "%"
 roots = []
-indent = { tab-width = 2, unit = "  "}
-language-server = { command = "asp-language-server", args = ["--stdio"]}
+indent = { tab-width = 4, unit = "  "}
+language-servers = ["asp-language-server"]
 
 [[language]]
 name = "rust"
@@ -15,8 +15,9 @@ file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 comment-token = "//"
-language-server = { command = "rust-analyzer" }
+language-servers = ["rust-analyzer" ]
 indent = { tab-width = 4, unit = "    " }
+
 
 [language.auto-pairs]
 '(' = ')'
@@ -25,38 +26,36 @@ indent = { tab-width = 4, unit = "    " }
 '"' = '"'
 '`' = '`'
 
-[language.config]
-checkOnSave = { command = "clippy" }
 
 [[language]]
 name = "python"
-language-server = { command = "pylsp" }
+language-servers = ["pylsp" ]
 formatter = { command = "black", args = ["--quiet", "-"] }
 auto-format = true
 
-[language.config.pylsp.plugins]
-pyflakes = { enabled = false }
-mccabe = { enabled = false }
-pyls_isort = { enabled = false }
-pycodestyle = { enabled = false, maxLineLength = 79 }
-pydocstyle = { enabled = false }
-autopep8 = { enabled = false }
-yapf = { enabled = false }
-flake8 = { enabled = false }
-pylint = { enabled = false }
-ruff = { enabled = true, extendSelect = ["I"] }
-mypy = { enabled = true, live_mode = true, strict = true }
+# [language.pylsp.plugins]
+# pyflakes = { enabled = false }
+# mccabe = { enabled = false }
+# pyls_isort = { enabled = false }
+# pycodestyle = { enabled = false, maxLineLength = 79 }
+# pydocstyle = { enabled = false }
+# autopep8 = { enabled = false }
+# yapf = { enabled = false }
+# flake8 = { enabled = false }
+# pylint = { enabled = false }
+# ruff = { enabled = true, extendSelect = ["I"] }
+# mypy = { enabled = true, live_mode = true, strict = true }
 
-[[language]]
-name = "latex"
+# [[language]]
+# name = "latex"
 
-[language.config.texlab.build]
-onSave = true
-forwardSearchAfter = true
+# [language.config.texlab.build]
+# onSave = true
+# forwardSearchAfter = true
 
-[language.config.texlab.forwardSearch]
-executable = "zathura"
-args = [ "--synctex-forward", "%l:1:%f", "%p" ]
+# # [language.config.texlab.forwardSearch]
+# # executable = "zathura"
+# # args = [ "--synctex-forward", "%l:1:%f", "%p" ]
 
-[language.config.texlab.chktex]
-onEdit = true
+# [language.config.texlab.chktex]
+# onEdit = true
