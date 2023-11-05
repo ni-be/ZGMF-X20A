@@ -11,6 +11,7 @@ alias 2723="ddcutil -d 1 setvcp 10"
 
 ## PYTHON virtualenv
 alias あい="source ~/PYVENV/残酷/bin/activate"
+alias RSE="source ~/PYVENV/RSE/bin/activate"
 alias boo="deactivate"
 
 ##### alias FZF
