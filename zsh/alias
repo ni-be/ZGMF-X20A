@@ -74,19 +74,18 @@ alias ねね="zellij --layout futsu"
 # msc project 
 alias 残酷="zellij --session 地獄 --layout zankoku"
 
-# LATEX repo -> nikolasbertrand/kaku 
+# LATEX repo -> ni-be  * CHANGE*
 alias か="zellij --session 書く --layout kaku"
 
+# The Archive
+alias だ="zellij --session ダ --layout dev"
 #### Exercism
 alias す="zellij --session すいせい --layout suisei"
-
-#### Alias MetaTelingo Project
-alias め="zellij --session メターテリンゴ --layout metatel"
 
 ### Note Taking
 alias ringo="zellij --session 人生 --layout ringo"
 
-### 
+### WORK RSE 
 alias の="zellij --session ノエル --layout noel"
 
 ### RX-78-2
