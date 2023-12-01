@@ -11,8 +11,8 @@ alias 2723="ddcutil -d 1 setvcp 10"
 
 ## PYTHON virtualenv
 alias あい="source ~/PYVENV/残酷/bin/activate"
-alias RSE="source ~/PYVENV/RSE/bin/activate"
-alias boo="deactivate"
+alias 仕事="source ~/PYVENV/RSE/bin/activate"
+alias 死ぬ="deactivate"
 
 ##### alias FZF
 alias fzf="fzf --preview 'bat --color=always {}' --preview-window '~3' --bind 'enter:become(hx {})' --bind 'CTRL-k:become(zellij edit --floating {})' --bind 'CTRL-l:become(zellij action new-pane -- hx {})'" 
@@ -42,10 +42,10 @@ gip='git push'
     git push
 }
 
-alias う="gitui"
+alias ぐ="gitui"
 
 #### LATEX ###
-alias え="tectonic *.tex"
+alias て="tectonic *.tex"
 
 #### EXA 
 alias ll='exa -l --icons --no-user --git'
@@ -59,37 +59,39 @@ alias la='exa --all'
 ##### ZELLIJ ##############
 ###########################
 alias zj="zellij"
+alias zjl="zellij list-sessions"
+alias zja="zellij attach"
 
 #run in floating window
-alias zrf="zellij run -f --"
+alias zjf="zellij run -f --"
 
 ##### Choose active session ### TODO CHARM - make it look nicer 
-alias あ="zellij-runner"
-alias a="zellij-runner"
-alias ねね="zellij --layout futsu"
+
+alias zjn="zellij --layout futsu"
 
 #####################
 # Sessions/Workspaces
 
 # msc project 
-alias 残酷="zellij --session 地獄 --layout zankoku"
+alias 残酷="zellij --session 残酷 --layout zankoku"
 
-# LATEX repo -> ni-be  * CHANGE*
-alias か="zellij --session 書く --layout kaku"
+#AOC23
+alias aoc="zellij --session AOC23"
 
 # The Archive
-alias だ="zellij --session ダ --layout dev"
+alias たから="zellij --session archive --layout dev"
+
 #### Exercism
-alias す="zellij --session すいせい --layout suisei"
+alias すいせい="zellij --session すいせい --layout suisei"
 
 ### Note Taking
-alias ringo="zellij --session 人生 --layout ringo"
+alias りんご="zellij --session りんご --layout ringo"
 
 ### WORK RSE 
-alias の="zellij --session ノエル --layout noel"
+alias のえる="zellij --session のえる --layout noel"
 
 ### RX-78-2
-alias が="zellij --session RX-78-2 --layout rx782"
+alias rx="zellij --session RX-78-2 --layout rx782"
 
 ##### ETC 
 # TTYD Terminal in browser

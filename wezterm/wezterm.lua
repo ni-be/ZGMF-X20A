@@ -13,7 +13,7 @@ local config = wezterm.config_builder()
 -- For example, changing the color scheme:
 config.color_scheme = 'Tokyo Night Moon'
 config.window_background_opacity = 0.96
-config.font_size = 10
+config.font_size = 11
 config.font = wezterm.font('HackGen35 Console NF', { weight = 'Regular' })
 config.window_padding = {
   left = '0.1cell',
