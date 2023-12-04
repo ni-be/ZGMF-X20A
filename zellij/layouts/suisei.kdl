@@ -6,18 +6,23 @@ layout {
         }
     }
 	// Gloab working directory
-	cwd "/home/nibe/PROJECTS/exercism"
-	tab name="Library" split_direction="vertical" {
 	
-        pane size="50%" name="main"{
-			
-		}
-		pane size="50%" split_direction="horizontal" {
-			pane name="readme" size="70%"
-			pane name="tests" size="30%"
-		}
+	tab name="すいせい" {
+		
+    	pane name="コード" cwd="~/PROJECTS/exercism" 
+		
 	}
-	tab name="Git" {
-		pane name="Git" command="gitui"
+	tab name="アーカイブ"{
+		pane name="コード" cwd="~/PROJECTS/theArchive"
+	}
+	tab name="本" {
+		pane name="ファイル" cwd="~/SHOUSAI/ringo" command="broot"
+	}
+	
+	tab name="ジット" split_direction="vertical"{
+		pane size="32%" name="ジットのすいせい" cwd="~/PROJECTS/exercism" command="gitui"
+		pane size="33%" name="ジットのアーカイブ" cwd="~/PROJECTS/theArchive" command="gitui"
+		pane size="35%" name="ジットのリンゴ" cwd="~/SHOUSAI/ringo" command="gitui"
+
 	}
 }

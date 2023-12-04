@@ -17,6 +17,9 @@ layout {
 			pane name="タ" size="30%"
 		}
 	}
+	tab name="本" {
+		pane="ファイル" cwd="~/SHOUSAI/ringo" command="broot"
+	}
 	tab name="ジット" {
 		pane name="ジット" command="gitui"
 	}

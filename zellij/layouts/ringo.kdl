@@ -12,7 +12,7 @@ layout {
 		pane name"プリビュー"  cwd="docs"
     }
 	tab name="ファイル" {
-		pane name="dir" cwd="reading" command="broot"
+		pane name="dir" command="broot"
 	}
 	tab name="GIT" {
 		pane name="ギット" command="gitui"
