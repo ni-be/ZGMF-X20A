@@ -8,7 +8,7 @@ alias peko="bartib"
 alias gvid="bash ~/GIT/sixvid/sixvid"
 
 alias 2723="ddcutil -d 1 setvcp 10"
-
+alias pdf="~/GIT/termpdf.py/termpdf.py"
 ## PYTHON virtualenv
 alias あい="source ~/PYVENV/残酷/bin/activate"
 alias 仕事="source ~/PYVENV/RSE/bin/activate"
