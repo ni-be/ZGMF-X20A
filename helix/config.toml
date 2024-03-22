@@ -3,12 +3,13 @@ theme = "tokyonight"
 
 [editor]
 line-number = "relative"
-mouse = true
-middle-click-paste = true
+mouse = false
+middle-click-paste = false
 auto-completion = true
 auto-format  = true
 completion-replace = true
-text-width = 79
+text-width = 108
+
 
 [editor.cursor-shape]
 insert = "bar"
@@ -19,6 +20,7 @@ select = "underline"
 display-messages = true
 display-inlay-hints = true
 snippets = true
+goto-reference-include-declaration = true
 
 [editor.statusline]
 separator = "｜"
@@ -28,6 +30,7 @@ right = ["version-control", "separator", "workspace-diagnostics", "separator", "
 mode.normal = "普通"
 mode.insert = "入れる"
 mode.select = "選ぶ"
+
 
 [editor.indent-guides]
 render = true
@@ -55,10 +58,10 @@ tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 [editor.soft-wrap]
 enable = true
-max-wrap = 25 # increase value to reduce forced mid-word wrapping
-max-indent-retain = 0
-wrap-indicator = ""  # set wrap-indicator to "" to hide it
-wrap-at-text-width = true
+max-wrap = 20 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 40
+wrap-indicator = "↪"  # set wrap-indicator to "" to hide it
+wrap-at-text-width = false
 
 [keys.normal]
 K = "hover"

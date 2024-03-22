@@ -12,17 +12,9 @@ layout {
     	pane name="コード" cwd="~/PROJECTS/exercism" 
 		
 	}
-	tab name="アーカイブ"{
-		pane name="コード" cwd="~/PROJECTS/theArchive"
-	}
-	tab name="本" {
-		pane name="ファイル" cwd="~/SHOUSAI/ringo" command="broot"
-	}
 	
-	tab name="ジット" split_direction="vertical"{
-		pane size="32%" name="ジットのすいせい" cwd="~/PROJECTS/exercism" command="gitui"
-		pane size="33%" name="ジットのアーカイブ" cwd="~/PROJECTS/theArchive" command="gitui"
-		pane size="35%" name="ジットのリンゴ" cwd="~/SHOUSAI/ringo" command="gitui"
+	tab name="ジット" {
+		pane name="ジット" cwd="~/PROJECTS/exercism" command="gitui"
 
 	}
 }

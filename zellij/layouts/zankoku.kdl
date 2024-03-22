@@ -1,6 +1,6 @@
 layout {
 	
-    cwd "/home/nibe/PROJECTS/blingo"
+    cwd "/home/nibe/PROJECTS/MARP-ASP"
 	default_tab_template {
         children
         pane size=2 borderless=true {

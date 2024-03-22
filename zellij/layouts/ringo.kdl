@@ -8,8 +8,7 @@ layout {
 	// Gloab working directory
 	cwd "/home/nibe/SHOSAI/ringo"
 	tab name="ノート" split_direction="vertical" {
-       	pane name="今の" cwd="docs"
-		pane name"プリビュー"  cwd="docs"
+       	pane name="書く場" 
     }
 	tab name="ファイル" {
 		pane name="dir" command="broot"
