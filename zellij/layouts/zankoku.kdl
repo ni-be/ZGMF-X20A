@@ -7,16 +7,16 @@ layout {
             plugin location="zellij:compact-bar"
         }
     }
-	tab name="MAIN" {
+	tab name="第１" {
 	    pane name="書く"
-			
-	
     }
-	tab name="FILES" split_direction="vertical" {
-			pane size="50%" name="残酷の" 
-			pane size="50%" name="ひより" cwd="/home/nibe/PROJETCS/hiyori" 
+	tab name="ファイル" split_direction="vertical" { 
+			pane name="ひより" cwd="/home/nibe/SHOSAI/ringo" 
 	}
-	tab name="GIT" {
+	tab name="ギット" {
 		pane name="ギット" command="gitui"
+	}
+	tab name="その地" {
+		pane name="何でも" cwd="/home/nibe"
 	}
 }

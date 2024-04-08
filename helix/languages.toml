@@ -7,24 +7,6 @@ roots = []
 indent = { tab-width = 4, unit = "  "}
 language-servers = ["asp-language-server"]
 
-[[language]]
-name = "rust"
-scope = "source.rust"
-injection-regex = "rust"
-file-types = ["rs"]
-roots = ["Cargo.toml", "Cargo.lock"]
-auto-format = true
-comment-token = "//"
-language-servers = ["rust-analyzer" ]
-indent = { tab-width = 4, unit = "    " }
-
-
-[language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
-'`' = '`'
 
 
 [[language]]
