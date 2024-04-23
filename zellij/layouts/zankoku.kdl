@@ -11,12 +11,13 @@ layout {
 	    pane name="書く"
     }
 	tab name="ファイル" split_direction="vertical" { 
-			pane name="ひより" cwd="/home/nibe/SHOSAI/ringo" 
+			pane name="🍎" cwd="/home/nibe/SHOSAI/ringo" command="broot" 
 	}
 	tab name="ギット" {
 		pane name="ギット" command="gitui"
 	}
-	tab name="その地" {
-		pane name="何でも" cwd="/home/nibe"
+	tab name="書く"{
+		pane name="論文" cwd="/home/nibe/SHOSAI/ringo/MARP-ASP"
 	}
+	
 }
