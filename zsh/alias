@@ -95,7 +95,7 @@ alias rx="zellij --session RX-78-2 --layout rx782"
 
 #### ETC 
 # TTYD Terminal in browser
-alias ttyd="ttyd -t enableSixel=true -p 9001 zsh"
+alias ttyd="ttyd -W -t enableSixel=true -p 9001 zsh"
 alias ttydk="ps -ef | rg ttyd"
 ##### Jisho.org
 alias じ="jisho"
