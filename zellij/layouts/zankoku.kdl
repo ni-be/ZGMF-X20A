@@ -3,7 +3,7 @@ layout {
     cwd "/home/nibe/PROJECTS/MARP-ASP"
 	default_tab_template {
         children
-        pane size=2 borderless=true {
+        pane size=1 borderless=true {
             plugin location="zellij:compact-bar"
         }
     }
@@ -17,7 +17,7 @@ layout {
 		pane name="ギット" command="gitui"
 	}
 	tab name="書く"{
-		pane name="論文" cwd="/home/nibe/SHOSAI/ringo/MARP-ASP"
+		pane name="論文" cwd="/home/nibe/SHOSAI/ringo"
 	}
 	
 }

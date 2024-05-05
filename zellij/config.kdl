@@ -143,8 +143,8 @@ plugins {
 on_force_close "detach" // or quit when SIGTERM, SIGINT, SIGQUIT SIGHUP
 simplified_ui false // true
 default_shell "zsh"
-pane_frames true // true
-theme "~/.config/zellij/themes/tokyo-night-storm"
+pane_frames false // true
+//theme "~/.config/zellij/themes/tokyo-night-storm"
 default_layout "futsu"
 default_mode "Normal"
 mouse_mode true // true (default)
