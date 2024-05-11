@@ -1,5 +1,5 @@
 
-theme = "tokyonight"
+theme = "ayu_evolve"
 
 [editor]
 line-number = "relative"
@@ -8,7 +8,7 @@ middle-click-paste = false
 auto-completion = true
 auto-format  = true
 completion-replace = true
-text-width = 108
+text-width = 79
 
 
 [editor.cursor-shape]
