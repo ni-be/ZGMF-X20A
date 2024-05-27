@@ -19,7 +19,7 @@ keybinds clear-defaults=true {
         bind "Alt [" { GoToPreviousTab; }
         bind "Alt ]" { GoToNextTab; }              
         //Session
-        bind "F5" { Detach; }
+        bind "F6" { Detach; }
     }
     tmux {
     
@@ -97,12 +97,17 @@ keybinds clear-defaults=true {
         bind "Esc" {SwitchToMode "Pane";}
         bind "Enter" { SwitchToMode "Normal"; }
     }
-    // Switch Modes and Shared Bindings
+    session {
+        bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
+        bind "d" { Detach; }
+    }
+        // Switch Modes and Shared Bindings
     shared_except "Normal" "locked" "entersearch" {
         bind "Esc" {SwitchToMode "Normal";}
     }
     shared_except "locked" "entersearch" {
-        bind "F5" { SwitchToMode "Locked"; }
+        bind "F4" { SwitchToMode "Locked"; }
         bind "Ctrl q" { Quit; }
         bind "Alt 1" { GoToTab 1; }
         bind "Alt 2" { GoToTab 2; }
@@ -132,6 +137,9 @@ keybinds clear-defaults=true {
     }
     shared_except "pane" "locked" {
         bind "F3" { SwitchToMode "Pane";}
+    }
+    shared_except "session" "locked" {
+        bind "F5" { SwitchToMode "Session"; }
     }
 }
 plugins {

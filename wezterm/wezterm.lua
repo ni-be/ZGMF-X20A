@@ -10,15 +10,15 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
-config.color_scheme = 'tokyonight_night'
+config.color_scheme = 'Kanagawa (Gogh)'
 config.window_background_opacity = 1
 config.font_size = 12
 config.font = wezterm.font('Cascadia Code NF', { weight = 'Regular' })
 config.window_padding = {
-  left = '0.1cell',
-  right = '0.1cell',
-  top = '0.1cell',
-  bottom = '0.01cell',
+  left = '0.2cell',
+  right = '0.2cell',
+  top = '0.2cell',
+  bottom = '0.21cell',
 }
 config.show_update_window = false
 

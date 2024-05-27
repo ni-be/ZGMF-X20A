@@ -7,14 +7,14 @@ layout {
             plugin location="zellij:compact-bar"
         }
     }
-	tab name="第１" {
-	    pane name="書く"
+	tab name="MARP-ASP" {
+	    pane name="encoding"
     }
 	tab name="ファイル" split_direction="vertical" { 
 			pane name="🍎" cwd="/home/nibe/SHOSAI/ringo" command="broot" 
 	}
 	tab name="ギット" {
-		pane name="ギット" command="gitui"
+		pane name="ギット" command="lazygit"
 	}
 	tab name="書く"{
 		pane name="論文" cwd="/home/nibe/SHOSAI/ringo"
