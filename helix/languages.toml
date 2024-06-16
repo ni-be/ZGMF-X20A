@@ -7,16 +7,22 @@ roots = []
 indent = { tab-width = 4, unit = "  "}
 language-servers = ["asp-language-server"]
 
-
+[language-server.ruff]
+command = "ruff-lsp"
 
 [[language]]
 name = "python"
-language-servers = ["pylsp" ]
-formatter = { command = "ruff", args = ["--quiet", "-"] }
+language-servers = [ "ruff" ]
 auto-format = true
 
-[language-server.pylsp.config.pylsp]
-plugins.ruff.enabled = true
+# [[language]]
+# name = "python"
+# language-servers = ["pylsp" ]
+# formatter = { command = "ruff", args = ["--quiet", "-"] }
+# auto-format = false
+
+# [language-server.pylsp.config.pylsp]
+# plugins.ruff.enabled = true
 # [language.pylsp.plugins]
 # pyflakes = { enabled = false }
 # mccabe = { enabled = false }
