@@ -48,12 +48,12 @@ alias ぐ="gitui"
 alias て="tectonic *.tex"
 
 #### EXA 
-alias ll='exa -l --icons --no-user --git'
-alias l1='exa --tree --level 1 --icons --git'
-alias l2='exa --tree --level 2 --icons --git'
-alias l3='exa --tree --level 3 --icons --git'
-alias ls='exa'
-alias la='exa --all'
+alias ll='eza -l --icons --no-user --git'
+alias l1='eza --tree --level 1 --icons --git'
+alias l2='eza --tree --level 2 --icons --git'
+alias l3='eza --tree --level 3 --icons --git'
+alias ls='eza'
+alias la='eza --all'
 
 ###########################
 ##### ZELLIJ ##############
