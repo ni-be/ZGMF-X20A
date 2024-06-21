@@ -17,8 +17,8 @@ export GOPATH=/home/nibe/go:$GOPATH
 
 ## QOL apps 
 #=============
-export BARTIB_FILE="/home/nibe/SHOSAI/ringo/ぺこ.md"
-
+export BARTIB_FILE="/Users/nibe/SHOSAI/ringo/ぺこ.md"
+#export BARTIB_FILE="/home/nibe/SHOSAI/ringo/ぺこ.md"
 
 ## ZELLIJ RUNNER
 #===================

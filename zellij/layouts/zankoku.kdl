@@ -1,23 +1,23 @@
 layout {
 	
-    cwd "/home/nibe/PROJECTS/MARP-ASP"
+    cwd "~/PROJECTS/clinOTA"
 	default_tab_template {
         children
         pane size=1 borderless=true {
             plugin location="zellij:compact-bar"
         }
     }
-	tab name="MARP-ASP" {
+	tab name="CLINOTA" {
 	    pane name="encoding"
     }
 	tab name="ファイル" split_direction="vertical" { 
-			pane name="🍎" cwd="~/SHOSAI/ringo" command="broot" 
+			pane name="🍎" cwd="~/PROJECTS/clinOTA/literature" command="broot" 
 	}
 	tab name="ギット" {
 		pane name="ギット" command="gitui"
 	}
 	tab name="書く"{
-		pane name="論文" cwd="~/PROJECTS/msc"
+		pane name="論文" cwd="~/PROJECTS/clinOTA/thesis"
 	}
 	
 }

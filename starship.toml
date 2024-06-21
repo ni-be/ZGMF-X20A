@@ -126,9 +126,9 @@ symbol = " "
 [spack]
 symbol = "🅢 "
 
-[custom.bartib]
-style = "bg:#06969A"
-format = "[$symbol ($output) ]($style)"
-command = "bartib current | head -n 3 | tail -n 1 | tr -d '\n'"
-when = "bartib current | grep -q -v 'No Activity is currently running'"
-symbol = "⏲️ "
+#[custom.bartib]
+#style = "bg:#06969A"
+#format = "[$symbol ($output) ]($style)"
+#command = "bartib current | head -n 3 | tail -n 1 | tr -d '\n'"
+#when = "bartib current | grep -q -v 'No Activity is currently running'"
+#symbol = "⏲️ "
