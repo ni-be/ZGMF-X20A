@@ -20,6 +20,7 @@ alias fzt="/home/nibe/ZGMF-X20A/scripts/rfv"
 alias fzd="cd ~ && cd \$(find * -type d | fzf)"
 
 
+
 #### GIT 
 alias gitup='ssh-add ~/.ssh/gitup'
 gic='git commit -m'

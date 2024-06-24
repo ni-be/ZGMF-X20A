@@ -34,3 +34,7 @@ type starship_zle-keymap-select >/dev/null || \
     eval "$(/usr/local/bin/starship init zsh)"
   }
 # eval "$(starship init zsh)"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# Created by `pipx` on 2024-06-22 12:43:51
+export PATH="$PATH:/Users/ni-be/.local/bin"
